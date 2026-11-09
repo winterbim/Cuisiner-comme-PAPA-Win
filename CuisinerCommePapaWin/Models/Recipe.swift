@@ -142,7 +142,9 @@ struct Ingredient: Codable, Hashable {
     /// Quantité adaptée au nombre de personnes, ex. « 1½ c. à soupe ».
     func quantityText(scale: Double) -> String? {
         guard let quantity else { return nil }
-        let number = QuantityFormatter.format(quantity * scale)
+        // kg et l : décimales (1,2 kg) plutôt que des quarts (1¼ kg).
+        let decimal = unit.map { QuantityFormatter.decimalUnits.contains($0) } ?? false
+        let number = QuantityFormatter.format(quantity * scale, decimal: decimal)
         if let unit { return "\(number) \(unit)" }
         return number
     }
@@ -203,9 +205,18 @@ struct Recipe: Identifiable, Codable, Hashable {
 // MARK: - Mise en forme
 
 enum QuantityFormatter {
+    /// Unités métriques affichées en décimales.
+    static let decimalUnits: Set<String> = ["kg", "l"]
+
     /// Arrondit joliment : 600 g, 1½, ¾, 12…
-    static func format(_ value: Double) -> String {
+    /// `decimal` : arrondi au dixième sous 10 (1,2 ; 0,6) au lieu des quarts.
+    static func format(_ value: Double, decimal: Bool = false) -> String {
         guard value > 0 else { return "0" }
+        if decimal && value < 10 {
+            let tenths = max((value * 10).rounded(), 1) / 10
+            if tenths == tenths.rounded() { return "\(Int(tenths))" }
+            return String(format: "%.1f", tenths).replacingOccurrences(of: ".", with: ",")
+        }
         let rounded: Double
         if value >= 100 {
             rounded = (value / 5).rounded() * 5

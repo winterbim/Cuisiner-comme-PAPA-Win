@@ -127,7 +127,11 @@ struct RecipeCard: View {
                     .foregroundStyle(Theme.inkSoft)
                     .lineLimit(1)
                 HStack(spacing: 6) {
+                    // Le badge garde sa taille (« Facile », « Costaud » jamais tronqués) ;
+                    // c'est la durée qui rétrécit si la carte est étroite.
                     DifficultyBadge(difficulty: recipe.difficulty)
+                        .fixedSize()
+                        .layoutPriority(1)
                     Spacer(minLength: 0)
                     HStack(spacing: 3) {
                         Image(systemName: "clock")
@@ -136,6 +140,7 @@ struct RecipeCard: View {
                     .font(.caption2.weight(.semibold))
                     .foregroundStyle(Theme.inkSoft)
                     .lineLimit(1)
+                    .minimumScaleFactor(0.75)
                 }
             }
             .padding(12)

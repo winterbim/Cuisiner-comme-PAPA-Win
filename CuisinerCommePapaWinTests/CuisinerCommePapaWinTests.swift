@@ -98,6 +98,18 @@ final class FormatterTests: XCTestCase {
         XCTAssertNil(sel.quantityText(scale: 3))
     }
 
+    func testKiloEtLitreEnDecimales() {
+        let agneau = Ingredient(quantity: 1.2, unit: "kg", name: "épaule d'agneau")
+        XCTAssertEqual(agneau.quantityText(scale: 1), "1,2 kg")
+        XCTAssertEqual(agneau.quantityText(scale: 0.5), "0,6 kg")
+        XCTAssertEqual(agneau.quantityText(scale: 2.5), "3 kg")
+        let bouillon = Ingredient(quantity: 1.2, unit: "l", name: "bouillon")
+        XCTAssertEqual(bouillon.quantityText(scale: 7.0 / 6.0), "1,4 l")
+        // Les autres unités gardent les fractions.
+        let miel = Ingredient(quantity: 2, unit: "c. à soupe", name: "miel")
+        XCTAssertEqual(miel.quantityText(scale: 1.25), "2½ c. à soupe")
+    }
+
     func testDurees() {
         XCTAssertEqual(DurationFormatter.text(45), "45 min")
         XCTAssertEqual(DurationFormatter.text(60), "1 h")
