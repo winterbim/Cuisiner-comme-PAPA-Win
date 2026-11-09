@@ -160,12 +160,28 @@ workflows:
           LATEST=$(app-store-connect get-latest-testflight-build-number "$APP_STORE_APPLE_ID" || echo 0)
           NEXT=$((LATEST + 1))
           echo "Numéro de build : $NEXT"
-          agvtool new-version -all "$NEXT"
+          # Pas d'agvtool : l'Info.plist est généré (GENERATE_INFOPLIST_FILE = YES) et agvtool
+          # échoue à le trouver. CFBundleVersion vient de CURRENT_PROJECT_VERSION, modifié ici.
+          PBXPROJ="$XCODE_PROJECT/project.pbxproj"
+          sed -i '' -E "s/CURRENT_PROJECT_VERSION = [0-9]+;/CURRENT_PROJECT_VERSION = ${NEXT};/" "$PBXPROJ"
+          if grep -E "CURRENT_PROJECT_VERSION = [0-9]+;" "$PBXPROJ" | grep -vq "= ${NEXT};"; then
+            echo "CURRENT_PROJECT_VERSION n'a pas été mis à jour partout" >&2
+            exit 1
+          fi
+          grep -E "CURRENT_PROJECT_VERSION" "$PBXPROJ"
+          echo "BUILD_NUMBER_TESTFLIGHT=$NEXT" >> "$CM_ENV"
       - name: Construction de l'IPA signée (Release)
         script: |
           #!/usr/bin/env bash
           set -euo pipefail
           xcode-project build-ipa --project "$XCODE_PROJECT" --scheme "$XCODE_SCHEME" --config Release
+          # Vérifie le numéro de build réellement présent dans l'IPA.
+          IPA=$(ls build/ios/ipa/*.ipa | head -1)
+          TMP=$(mktemp -d)
+          unzip -q -o "$IPA" 'Payload/*.app/Info.plist' -d "$TMP"
+          VERSION_IPA=$(/usr/libexec/PlistBuddy -c "Print :CFBundleVersion" "$TMP"/Payload/*.app/Info.plist)
+          echo "CFBundleVersion dans l'IPA : $VERSION_IPA (attendu : $BUILD_NUMBER_TESTFLIGHT)"
+          [ "$VERSION_IPA" = "$BUILD_NUMBER_TESTFLIGHT" ]
     artifacts:
       - build/ios/ipa/*.ipa
       - build/logs/*.log
