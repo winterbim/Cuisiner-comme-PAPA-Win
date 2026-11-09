@@ -120,7 +120,7 @@ struct RecipeDetailView: View {
                 ForEach(Array(recipe.ingredients.enumerated()), id: \.offset) { index, ingredient in
                     IngredientRow(ingredient: ingredient, scale: scale,
                                   isChecked: checkedIngredients.contains(index)) {
-                        toggle(index, in: &checkedIngredients)
+                        toggle(index, in: $checkedIngredients)
                     }
                     if index < recipe.ingredients.count - 1 {
                         Divider().padding(.leading, 44)
@@ -178,7 +178,7 @@ struct RecipeDetailView: View {
             SectionTitle(text: "Étapes", emoji: "👨‍🍳")
             ForEach(Array(recipe.steps.enumerated()), id: \.offset) { index, step in
                 StepRow(number: index + 1, text: step, isDone: doneSteps.contains(index)) {
-                    toggle(index, in: &doneSteps)
+                    toggle(index, in: $doneSteps)
                 }
             }
         }
@@ -214,13 +214,10 @@ struct RecipeDetailView: View {
         return messages[cookbook.timesCooked(recipe) % messages.count]
     }
 
-    private func toggle(_ index: Int, in set: inout Set<Int>) {
+    /// Coche / décoche dans la transaction animée (Binding, pour que l'état change pendant l'animation).
+    private func toggle(_ index: Int, in set: Binding<Set<Int>>) {
         withAnimation(.easeInOut(duration: 0.2)) {
-            if set.contains(index) {
-                set.remove(index)
-            } else {
-                set.insert(index)
-            }
+            set.wrappedValue.formSymmetricDifference([index])
         }
     }
 }

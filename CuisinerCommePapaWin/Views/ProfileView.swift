@@ -29,7 +29,9 @@ struct ProfileView: View {
                             .padding(.vertical, 6)
                             .background(Theme.yellow, in: Capsule())
                         if let next = level.next {
-                            Text("Encore \(next - distinct) plat\(next - distinct > 1 ? "s" : "") différent\(next - distinct > 1 ? "s" : "") pour monter en grade !")
+                            let remaining = next - distinct
+                            let plural = remaining > 1 ? "s" : ""
+                            Text("Encore \(remaining) plat\(plural) différent\(plural) pour monter en grade !")
                                 .font(.footnote.weight(.semibold))
                                 .foregroundStyle(Theme.inkSoft)
                                 .multilineTextAlignment(.center)

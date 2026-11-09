@@ -144,6 +144,7 @@ workflows:
         script: |
           #!/usr/bin/env bash
           set -euo pipefail
+          : "${APP_STORE_APPLE_ID:?APP_STORE_APPLE_ID manquant (groupe de variables papa_win_app_store)}"
           LATEST=$(app-store-connect get-latest-testflight-build-number "$APP_STORE_APPLE_ID" || echo 0)
           NEXT=$((LATEST + 1))
           echo "Numéro de build : $NEXT"
