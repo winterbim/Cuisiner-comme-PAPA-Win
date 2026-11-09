@@ -118,8 +118,6 @@ workflows:
         bundle_identifier: com.papawin.cuisiner
       vars:
         <<: *xcode_vars
-        # Valeur de la case « autoriser_images_provisoires » choisie au lancement du build.
-        AUTORISER_IMAGES_PROVISOIRES: "${{ inputs.autoriser_images_provisoires }}"
       groups:
         # Groupe de variables Codemagic contenant APP_STORE_APPLE_ID
         # (identifiant numérique de l'app dans App Store Connect › Informations sur l'app).
@@ -132,8 +130,11 @@ workflows:
         script: |
           #!/usr/bin/env bash
           set -euo pipefail
-          if [ "${AUTORISER_IMAGES_PROVISOIRES:-false}" = "true" ]; then
-            echo "⚠️  Build TestFlight INTERNE avec images provisoires (AUTORISER_IMAGES_PROVISOIRES=true)."
+          # Valeur de la case « autoriser_images_provisoires » choisie au lancement du build.
+          AUTORISER_IMAGES_PROVISOIRES="${{ inputs.autoriser_images_provisoires }}"
+          echo "autoriser_images_provisoires = ${AUTORISER_IMAGES_PROVISOIRES}"
+          if [ "${AUTORISER_IMAGES_PROVISOIRES}" = "true" ]; then
+            echo "⚠️  Build TestFlight INTERNE avec images provisoires (autoriser_images_provisoires=true)."
             python3 scripts/validate_assets.py --non-bloquant --json build/rapport_images.json 2>&1 | tee build/logs/images.log
           else
             python3 scripts/validate_assets.py --json build/rapport_images.json 2>&1 | tee build/logs/images.log
