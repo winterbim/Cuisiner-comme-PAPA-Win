@@ -1,0 +1,167 @@
+# Codemagic — Cuisiner comme Papa Win (SwiftUI, iOS 17+)
+#
+# Deux workflows :
+#   1. verification-ios : automatique à chaque push / pull request. Contrôles, tests unitaires
+#      sur simulateur et compilation Debug + Release (simulateur et iPhone) SANS signature.
+#   2. testflight-ios   : lancé À LA MAIN depuis Codemagic. Signe l'app et l'envoie sur TestFlight.
+#      Il n'y a JAMAIS de soumission automatique à l'App Store (submit_to_app_store: false).
+#
+# Prérequis côté Codemagic / Apple : voir docs/CAHIER_DES_CHARGES.md, section « Codemagic ».
+# Aucun secret n'est stocké dans ce fichier.
+
+definitions:
+  instance: &instance
+    instance_type: mac_mini_m2
+  xcode_vars: &xcode_vars
+    XCODE_PROJECT: CuisinerCommePapaWin.xcodeproj
+    XCODE_SCHEME: CuisinerCommePapaWin
+    BUNDLE_ID: com.papawin.cuisiner
+  scripts:
+    - &preparation
+      name: Environnement de build
+      script: |
+        #!/usr/bin/env bash
+        set -euo pipefail
+        mkdir -p build/logs
+        { sw_vers; xcodebuild -version; python3 --version; git log -1 --oneline; } | tee build/logs/environnement.log
+    - &controles
+      name: Contrôles (tests des scripts, recettes, projet Xcode)
+      script: |
+        #!/usr/bin/env bash
+        set -euo pipefail
+        python3 -m unittest discover -s scripts/tests -v 2>&1 | tee build/logs/tests_scripts.log
+        python3 scripts/validate_recipes.py 2>&1 | tee build/logs/recettes.log
+        python3 scripts/check_xcode_project.py 2>&1 | tee build/logs/projet_xcode.log
+
+workflows:
+  verification-ios:
+    name: Vérification iOS (tests + compilation sans signature)
+    <<: *instance
+    max_build_duration: 60
+    environment:
+      xcode: latest
+      vars:
+        <<: *xcode_vars
+    triggering:
+      events:
+        - push
+        - pull_request
+      branch_patterns:
+        - pattern: "*"
+          include: true
+          source: true
+      cancel_previous_builds: true
+    scripts:
+      - *preparation
+      - *controles
+      - name: Rapport des images (non bloquant ici, bloquant pour TestFlight)
+        script: |
+          #!/usr/bin/env bash
+          set -euo pipefail
+          python3 scripts/validate_assets.py --non-bloquant --json build/rapport_images.json 2>&1 | tee build/logs/images.log
+      - name: Tests unitaires de l'app (simulateur iPhone)
+        script: |
+          #!/usr/bin/env bash
+          set -euo pipefail
+          UDID=$(scripts/ci/simulateur_iphone.sh)
+          xcodebuild test \
+            -project "$XCODE_PROJECT" \
+            -scheme "$XCODE_SCHEME" \
+            -configuration Debug \
+            -destination "id=$UDID" \
+            -resultBundlePath build/TestsApp.xcresult \
+            CODE_SIGNING_ALLOWED=NO 2>&1 | tee build/logs/xcodebuild_tests.log
+      - name: Compilation Release (simulateur et iPhone, sans signature)
+        script: |
+          #!/usr/bin/env bash
+          set -euo pipefail
+          xcodebuild build \
+            -project "$XCODE_PROJECT" -scheme "$XCODE_SCHEME" -configuration Release \
+            -destination "generic/platform=iOS Simulator" \
+            CODE_SIGNING_ALLOWED=NO 2>&1 | tee build/logs/xcodebuild_release_simulateur.log
+          xcodebuild build \
+            -project "$XCODE_PROJECT" -scheme "$XCODE_SCHEME" -configuration Release \
+            -destination "generic/platform=iOS" \
+            CODE_SIGNING_ALLOWED=NO 2>&1 | tee build/logs/xcodebuild_release_iphone.log
+      - name: Archivage des résultats de tests
+        script: |
+          #!/usr/bin/env bash
+          set -euo pipefail
+          if [ -d build/TestsApp.xcresult ]; then
+            (cd build && zip -qr TestsApp.xcresult.zip TestsApp.xcresult)
+          fi
+    artifacts:
+      - build/logs/*.log
+      - build/rapport_images.json
+      - build/TestsApp.xcresult.zip
+
+  testflight-ios:
+    name: Signature et envoi TestFlight (manuel)
+    <<: *instance
+    max_build_duration: 90
+    integrations:
+      # Nom EXACT de la clé API App Store Connect enregistrée dans Codemagic
+      # (Team settings › Integrations › Developer Portal). À adapter si tu la nommes autrement.
+      app_store_connect: Papa Win ASC
+    environment:
+      xcode: latest
+      ios_signing:
+        distribution_type: app_store
+        bundle_identifier: com.papawin.cuisiner
+      vars:
+        <<: *xcode_vars
+        # « true » autorise un build TestFlight interne malgré des illustrations provisoires.
+        # À changer uniquement dans l'écran de lancement du build, jamais pour l'App Store.
+        AUTORISER_IMAGES_PROVISOIRES: "false"
+      groups:
+        # Groupe de variables Codemagic contenant APP_STORE_APPLE_ID
+        # (identifiant numérique de l'app dans App Store Connect › Informations sur l'app).
+        - papa_win_app_store
+    # Pas de section « triggering » : ce workflow ne démarre que manuellement.
+    scripts:
+      - *preparation
+      - *controles
+      - name: Contrôle des images (bloquant)
+        script: |
+          #!/usr/bin/env bash
+          set -euo pipefail
+          if [ "${AUTORISER_IMAGES_PROVISOIRES:-false}" = "true" ]; then
+            echo "⚠️  Build TestFlight INTERNE avec images provisoires (AUTORISER_IMAGES_PROVISOIRES=true)."
+            python3 scripts/validate_assets.py --non-bloquant --json build/rapport_images.json 2>&1 | tee build/logs/images.log
+          else
+            python3 scripts/validate_assets.py --json build/rapport_images.json 2>&1 | tee build/logs/images.log
+          fi
+      - name: Tests unitaires de l'app (simulateur iPhone)
+        script: |
+          #!/usr/bin/env bash
+          set -euo pipefail
+          UDID=$(scripts/ci/simulateur_iphone.sh)
+          xcodebuild test -project "$XCODE_PROJECT" -scheme "$XCODE_SCHEME" -configuration Debug \
+            -destination "id=$UDID" CODE_SIGNING_ALLOWED=NO 2>&1 | tee build/logs/xcodebuild_tests.log
+      - name: Profils de signature
+        script: xcode-project use-profiles
+      - name: Numéro de build (dernier build TestFlight + 1)
+        script: |
+          #!/usr/bin/env bash
+          set -euo pipefail
+          LATEST=$(app-store-connect get-latest-testflight-build-number "$APP_STORE_APPLE_ID" || echo 0)
+          NEXT=$((LATEST + 1))
+          echo "Numéro de build : $NEXT"
+          agvtool new-version -all "$NEXT"
+      - name: Construction de l'IPA signée (Release)
+        script: |
+          #!/usr/bin/env bash
+          set -euo pipefail
+          xcode-project build-ipa --project "$XCODE_PROJECT" --scheme "$XCODE_SCHEME" --config Release
+    artifacts:
+      - build/ios/ipa/*.ipa
+      - build/logs/*.log
+      - build/rapport_images.json
+      - /tmp/xcodebuild_logs/*.log
+      - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
+    publishing:
+      app_store_connect:
+        auth: integration
+        submit_to_testflight: true
+        # Soumission à la revue App Store : JAMAIS automatique. Décision manuelle du propriétaire.
+        submit_to_app_store: false

@@ -17,6 +17,7 @@ SCRIPTS = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(SCRIPTS))
 
 import asset_lib as A  # noqa: E402
+import check_xcode_project as X  # noqa: E402
 import illustrations  # noqa: E402
 import validate_assets  # noqa: E402
 import validate_recipes  # noqa: E402
@@ -191,6 +192,54 @@ class RecipeValidatorTests(unittest.TestCase):
         self.assertEqual(code, 1)
         for expected in ("doit contenir 'Win'", "tag 'rapide' interdit", "au moins 4 étapes", "id en double"):
             self.assertIn(expected, out)
+
+
+class XcodeProjectTests(unittest.TestCase):
+    def setUp(self):
+        self.tmp = Path(tempfile.mkdtemp())
+        self.saved = (X.PBXPROJ, X.CODEMAGIC)
+
+    def tearDown(self):
+        X.PBXPROJ, X.CODEMAGIC = self.saved
+        shutil.rmtree(self.tmp)
+
+    def run_with(self, pbxproj_text=None, codemagic_text=None):
+        if pbxproj_text is not None:
+            X.PBXPROJ = self.tmp / "project.pbxproj"
+            X.PBXPROJ.write_text(pbxproj_text, encoding="utf-8")
+        if codemagic_text is not None:
+            X.CODEMAGIC = self.tmp / "codemagic.yaml"
+            X.CODEMAGIC.write_text(codemagic_text, encoding="utf-8")
+        return quiet(X.main)
+
+    def test_projet_du_depot_valide(self):
+        code, out = quiet(X.main)
+        self.assertEqual(code, 0, out)
+
+    def test_syntaxe_cassee(self):
+        text = self.saved[0].read_text(encoding="utf-8").replace("isa = PBXProject;", "isa = PBXProject", 1)
+        code, out = self.run_with(pbxproj_text=text)
+        self.assertEqual(code, 1)
+        self.assertIn("illisible", out)
+
+    def test_reference_cassee(self):
+        text = self.saved[0].read_text(encoding="utf-8").replace(
+            "targetProxy = A1B2C3D40000000000000108", "targetProxy = A1B2C3D4000000000000FFFF", 1)
+        code, out = self.run_with(pbxproj_text=text)
+        self.assertEqual(code, 1)
+        self.assertIn("A1B2C3D4000000000000FFFF", out)
+
+    def test_bundle_id_different_dans_codemagic(self):
+        text = self.saved[1].read_text(encoding="utf-8").replace("com.papawin.cuisiner", "com.autre.app")
+        code, out = self.run_with(codemagic_text=text)
+        self.assertEqual(code, 1)
+        self.assertIn("com.autre.app", out)
+
+    def test_soumission_app_store_interdite(self):
+        text = self.saved[1].read_text(encoding="utf-8").replace("submit_to_app_store: false", "submit_to_app_store: true")
+        code, out = self.run_with(codemagic_text=text)
+        self.assertEqual(code, 1)
+        self.assertIn("interdite", out)
 
 
 if __name__ == "__main__":
