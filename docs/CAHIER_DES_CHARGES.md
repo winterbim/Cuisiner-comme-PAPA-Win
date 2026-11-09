@@ -137,7 +137,8 @@ Tests XCTest de l'app, dans `CuisinerCommePapaWinTests/`, exécutés sur simulat
 | `verification-ios` | Automatique à chaque push et pull request | Contrôles et tests des scripts, tests XCTest sur simulateur iPhone, compilation **Release** pour simulateur et pour iPhone sans signature. Logs, `.xcresult` et rapport d'images en artefacts. Images : rapport non bloquant. |
 | `testflight-ios` | **Manuel** uniquement | Contrôles, **contrôle des images bloquant**, tests, signature, numéro de build = dernier build TestFlight + 1, IPA Release signée, envoi **TestFlight**. `submit_to_app_store: false`. |
 
-Le paramètre `AUTORISER_IMAGES_PROVISOIRES` vaut `false` par défaut. Le passer à `true` au lancement permet seulement un build
+Au lancement de `testflight-ios`, Codemagic propose la case `autoriser_images_provisoires` (non cochée par défaut),
+qui alimente `AUTORISER_IMAGES_PROVISOIRES`. La cocher permet seulement un build
 TestFlight **interne** pour tester sur un vrai iPhone. Jamais pour l'App Store.
 
 **À faire une seule fois par Winter**, aucun agent ne peut le faire à sa place :

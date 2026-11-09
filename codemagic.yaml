@@ -99,6 +99,14 @@ workflows:
     name: Signature et envoi TestFlight (manuel)
     <<: *instance
     max_build_duration: 90
+    inputs:
+      # Case proposée dans l'écran de lancement du build. « false » par défaut.
+      # Cochée, elle autorise un build TestFlight INTERNE malgré des illustrations provisoires.
+      # Jamais pour l'App Store.
+      autoriser_images_provisoires:
+        description: "Build TestFlight interne avec illustrations provisoires (jamais pour l'App Store)"
+        type: boolean
+        default: false
     integrations:
       # Nom EXACT de la clé API App Store Connect enregistrée dans Codemagic
       # (Team settings › Integrations › Developer Portal). À adapter si tu la nommes autrement.
@@ -110,9 +118,8 @@ workflows:
         bundle_identifier: com.papawin.cuisiner
       vars:
         <<: *xcode_vars
-        # « true » autorise un build TestFlight interne malgré des illustrations provisoires.
-        # À changer uniquement dans l'écran de lancement du build, jamais pour l'App Store.
-        AUTORISER_IMAGES_PROVISOIRES: "false"
+        # Valeur de la case « autoriser_images_provisoires » choisie au lancement du build.
+        AUTORISER_IMAGES_PROVISOIRES: "${{ inputs.autoriser_images_provisoires }}"
       groups:
         # Groupe de variables Codemagic contenant APP_STORE_APPLE_ID
         # (identifiant numérique de l'app dans App Store Connect › Informations sur l'app).
