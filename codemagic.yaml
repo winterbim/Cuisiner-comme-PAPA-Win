@@ -75,9 +75,11 @@ workflows:
         script: |
           #!/usr/bin/env bash
           set -euo pipefail
+          # derivedDataPath fixe : le .app simulateur est gardé en artefact pour Codemagic App Preview.
           xcodebuild build \
             -project "$XCODE_PROJECT" -scheme "$XCODE_SCHEME" -configuration Release \
             -destination "generic/platform=iOS Simulator" \
+            -derivedDataPath build/simulateur \
             CODE_SIGNING_ALLOWED=NO 2>&1 | tee build/logs/xcodebuild_release_simulateur.log
           xcodebuild build \
             -project "$XCODE_PROJECT" -scheme "$XCODE_SCHEME" -configuration Release \
@@ -94,6 +96,8 @@ workflows:
       - build/logs/*.log
       - build/rapport_images.json
       - build/TestsApp.xcresult.zip
+      # App simulateur (Release, non signée) : bouton « Quick launch » d'App Preview.
+      - build/simulateur/Build/Products/Release-iphonesimulator/*.app
 
   testflight-ios:
     name: Signature et envoi TestFlight (manuel)
