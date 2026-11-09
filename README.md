@@ -29,17 +29,27 @@ CuisinerCommePapaWin/
     Assets.xcassets               icône, mascotte, photos des plats
 scripts/
   validate_recipes.py   vérifie les fichiers de recettes
+  validate_assets.py    vérifie la couverture des images et la mascotte
   import_images.py      importe des images dans Assets.xcassets
+docs/
+  CODEX_RELEASE_PROMPT.md
+VISUAL_ASSET_AUDIT.md
 ```
 
 ## Ajouter / remplacer des images
 Nomme chaque image avec l'**id** de la recette (ex. `lok-win.jpg`, `coq-au-win.png`) et la mascotte
-`papa_win.png` (fond transparent conseillé), mets-les dans un dossier puis :
+`papa_win.jpg`, mets-les dans un dossier puis :
 ```bash
 python3 scripts/import_images.py chemin/vers/le/dossier
 ```
 Le script indique les images encore manquantes. Sans image, l'app affiche une vignette provisoire
-(emoji + couleurs de la cuisine) et une mascotte dessinée.
+(emoji + couleurs de la cuisine). La mascotte dessinée issue du portrait fourni est utilisée par `PapaWinAvatar`.
+
+Contrôle avant release :
+```bash
+python3 scripts/validate_recipes.py
+python3 scripts/validate_assets.py
+```
 
 ## Modifier les recettes
 Édite `CuisinerCommePapaWin/Resources/Data/recipes_<cuisine>.json`, puis vérifie :
