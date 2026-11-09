@@ -102,7 +102,7 @@ workflows:
     integrations:
       # Nom EXACT de la clé API App Store Connect enregistrée dans Codemagic
       # (Team settings › Integrations › Developer Portal). À adapter si tu la nommes autrement.
-      app_store_connect: Papa Win ASC
+      app_store_connect: bimcheck-academy-apple
     environment:
       xcode: latest
       ios_signing:

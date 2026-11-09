@@ -144,7 +144,7 @@ TestFlight **interne** pour tester sur un vrai iPhone. Jamais pour l'App Store.
 1. Sur codemagic.io, se connecter avec GitHub et ajouter le dépôt. Codemagic détecte `codemagic.yaml`.
 2. Sur App Store Connect, aller dans *Utilisateurs et accès › Intégrations* et créer une clé API avec le rôle *App Manager*.
    Noter l'*Issuer ID* et le *Key ID*, et télécharger le `.p8`.
-3. Dans Codemagic, aller dans *Team settings › Integrations › Developer Portal* et ajouter cette clé sous le nom **`Papa Win ASC`**.
+3. Dans Codemagic, aller dans *Team settings › Integrations › Developer Portal* et ajouter cette clé. Fait : la clé existante **`bimcheck-academy-apple`** (même équipe Apple F9B4GCT2HV) est réutilisée.
    Si tu choisis un autre nom, le reporter dans `codemagic.yaml`.
 4. Vérifier le Bundle ID **`com.papawin.cuisiner`** :
    - sur developer.apple.com, aller dans *Certificates, Identifiers & Profiles › Identifiers* ;
