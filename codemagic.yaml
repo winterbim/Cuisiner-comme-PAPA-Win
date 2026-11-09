@@ -133,12 +133,16 @@ workflows:
           # Valeur de la case « autoriser_images_provisoires » choisie au lancement du build.
           AUTORISER_IMAGES_PROVISOIRES="${{ inputs.autoriser_images_provisoires }}"
           echo "autoriser_images_provisoires = ${AUTORISER_IMAGES_PROVISOIRES}"
-          if [ "${AUTORISER_IMAGES_PROVISOIRES}" = "true" ]; then
-            echo "⚠️  Build TestFlight INTERNE avec images provisoires (autoriser_images_provisoires=true)."
-            python3 scripts/validate_assets.py --non-bloquant --json build/rapport_images.json 2>&1 | tee build/logs/images.log
-          else
-            python3 scripts/validate_assets.py --json build/rapport_images.json 2>&1 | tee build/logs/images.log
-          fi
+          # Codemagic transmet « True » / « False » (majuscule) : comparaison sans tenir compte de la casse.
+          case "${AUTORISER_IMAGES_PROVISOIRES}" in
+            true|True|TRUE)
+              echo "⚠️  Build TestFlight INTERNE avec images provisoires (autoriser_images_provisoires=true)."
+              python3 scripts/validate_assets.py --non-bloquant --json build/rapport_images.json 2>&1 | tee build/logs/images.log
+              ;;
+            *)
+              python3 scripts/validate_assets.py --json build/rapport_images.json 2>&1 | tee build/logs/images.log
+              ;;
+          esac
       - name: Tests unitaires de l'app (simulateur iPhone)
         script: |
           #!/usr/bin/env bash
