@@ -1,0 +1,1424 @@
+[
+  {
+    "id": "couscous-win-royal",
+    "name": "Couscous Win Royal",
+    "originalName": "Couscous royal",
+    "region": "maghreb",
+    "country": "Algérie",
+    "flag": "🇩🇿",
+    "emoji": "🥘",
+    "difficulty": "difficile",
+    "tags": [
+      "mijote",
+      "familial"
+    ],
+    "prepMinutes": 45,
+    "cookMinutes": 120,
+    "servings": 6,
+    "pitch": "Mon couscous royal : sept légumes, trois viandes et une semoule tellement légère qu'elle s'envole presque. Prévois des invités, il y en a pour le quartier.",
+    "ingredients": [
+      {
+        "quantity": 500,
+        "unit": "g",
+        "name": "semoule de couscous moyenne"
+      },
+      {
+        "quantity": 6,
+        "unit": null,
+        "name": "hauts de cuisse de poulet"
+      },
+      {
+        "quantity": 600,
+        "unit": "g",
+        "name": "épaule d'agneau en morceaux"
+      },
+      {
+        "quantity": 6,
+        "unit": null,
+        "name": "merguez"
+      },
+      {
+        "quantity": 2,
+        "unit": null,
+        "name": "oignons"
+      },
+      {
+        "quantity": 3,
+        "unit": null,
+        "name": "carottes"
+      },
+      {
+        "quantity": 3,
+        "unit": null,
+        "name": "navets"
+      },
+      {
+        "quantity": 3,
+        "unit": null,
+        "name": "courgettes"
+      },
+      {
+        "quantity": 300,
+        "unit": "g",
+        "name": "potiron ou courge butternut"
+      },
+      {
+        "quantity": 1,
+        "unit": "boîte",
+        "name": "pois chiches cuits (400 g)"
+      },
+      {
+        "quantity": 2,
+        "unit": "c. à soupe",
+        "name": "concentré de tomate"
+      },
+      {
+        "quantity": 2,
+        "unit": "c. à café",
+        "name": "ras el hanout"
+      },
+      {
+        "quantity": 50,
+        "unit": "g",
+        "name": "beurre ou smen"
+      },
+      {
+        "quantity": 5,
+        "unit": "c. à soupe",
+        "name": "huile d'olive"
+      },
+      {
+        "quantity": 1,
+        "unit": "c. à soupe",
+        "name": "harissa"
+      },
+      {
+        "quantity": null,
+        "unit": null,
+        "name": "sel, poivre"
+      }
+    ],
+    "steps": [
+      "Dans la marmite du couscoussier, fais revenir l'agneau et le poulet dans 3 c. à soupe d'huile avec les oignons émincés, 10 minutes à feu moyen. Ajoute le ras el hanout, le concentré de tomate, du sel et du poivre, mélange, puis couvre de 2,5 l d'eau. Porte à ébullition et laisse mijoter 45 minutes à couvert.",
+      "Pendant ce temps, verse la semoule dans un grand plat, arrose-la de 2 c. à soupe d'huile et frotte-la entre tes mains. Mouille-la petit à petit avec 25 cl d'eau tiède salée en l'égrenant du bout des doigts, puis laisse-la gonfler 10 minutes.",
+      "Ajoute les carottes et les navets coupés en deux dans la longueur dans le bouillon. Quand la vapeur s'échappe bien, pose le panier du couscoussier garni de semoule (sans tasser) et compte 20 minutes de cuisson à la vapeur.",
+      "Reverse la semoule dans le plat, arrose-la de 25 cl d'eau salée et égrène-la à la fourchette puis aux mains dès qu'elle a un peu tiédi. Ajoute les courgettes en tronçons, le potiron en cubes et les pois chiches égouttés dans le bouillon, puis remets la semoule à la vapeur 20 minutes.",
+      "Pendant la deuxième vapeur, fais griller les merguez à la poêle ou sous le gril du four, 10 à 12 minutes en les retournant.",
+      "Reverse une dernière fois la semoule dans le plat, incorpore le beurre en morceaux et égrène soigneusement : chaque grain doit être libre comme un ado en vacances. Goûte le bouillon et rectifie l'assaisonnement.",
+      "Délaie la harissa dans une louche de bouillon pour les amateurs de piquant. Sers la semoule en dôme, dispose viandes, merguez et légumes dessus, et le bouillon à part dans une soupière."
+    ],
+    "tip": "Ne pose jamais la semoule sur le couscoussier avant que la vapeur sorte franchement, sinon elle se transforme en pâte à modeler. Et si la vapeur fuit entre les deux étages, entoure la jointure d'un torchon humide : c'est le scotch des mamies."
+  },
+  {
+    "id": "tajine-win-au-poulet",
+    "name": "Tajine Win au Poulet",
+    "originalName": "Tajine de poulet au citron confit et aux olives",
+    "region": "maghreb",
+    "country": "Maroc",
+    "flag": "🇲🇦",
+    "emoji": "🍗",
+    "difficulty": "moyen",
+    "tags": [
+      "mijote",
+      "familial"
+    ],
+    "prepMinutes": 25,
+    "cookMinutes": 70,
+    "servings": 4,
+    "pitch": "Mon tajine de poulet : un citron confit qui chante, des olives qui dansent et une sauce que tu vas saucer jusqu'au dernier millimètre. Le pain, c'est pas une option, c'est une cuillère.",
+    "ingredients": [
+      {
+        "quantity": 1,
+        "unit": null,
+        "name": "poulet fermier d'environ 1,5 kg, coupé en 8 morceaux"
+      },
+      {
+        "quantity": 2,
+        "unit": null,
+        "name": "oignons"
+      },
+      {
+        "quantity": 3,
+        "unit": "gousses",
+        "name": "ail"
+      },
+      {
+        "quantity": 1,
+        "unit": null,
+        "name": "gros citron confit (ou 2 petits)"
+      },
+      {
+        "quantity": 150,
+        "unit": "g",
+        "name": "olives vertes ou violettes"
+      },
+      {
+        "quantity": 1,
+        "unit": "c. à café",
+        "name": "gingembre moulu"
+      },
+      {
+        "quantity": 1,
+        "unit": "c. à café",
+        "name": "curcuma"
+      },
+      {
+        "quantity": 1,
+        "unit": "pincée",
+        "name": "pistils de safran"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "bouquet",
+        "name": "coriandre fraîche"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "bouquet",
+        "name": "persil plat"
+      },
+      {
+        "quantity": 4,
+        "unit": "c. à soupe",
+        "name": "huile d'olive"
+      },
+      {
+        "quantity": 30,
+        "unit": "g",
+        "name": "beurre ou smen"
+      },
+      {
+        "quantity": null,
+        "unit": null,
+        "name": "sel, poivre"
+      }
+    ],
+    "steps": [
+      "Prépare la marinade : mélange l'ail râpé, le gingembre, le curcuma, le safran, la moitié des herbes hachées, l'huile d'olive, du sel et du poivre. Enrobes-en les morceaux de poulet et laisse mariner au moins 1 heure au frais (une nuit, c'est encore mieux).",
+      "Dans un tajine posé sur un diffuseur ou dans une cocotte, fais fondre le beurre et fais suer les oignons émincés 5 minutes à feu doux, sans coloration.",
+      "Dispose le poulet et toute sa marinade sur les oignons, ajoute 20 cl d'eau, couvre et laisse mijoter 45 minutes à feu doux en retournant les morceaux à mi-cuisson.",
+      "Pendant ce temps, fais blanchir les olives 2 minutes dans l'eau bouillante pour adoucir leur amertume. Rince le citron confit, retire la pulpe et taille l'écorce en lanières.",
+      "Ajoute les olives et le citron confit dans le tajine et poursuis la cuisson 15 minutes, dont les 5 dernières sans couvercle pour que la sauce devienne onctueuse.",
+      "Si la sauce est encore trop liquide, retire le poulet et fais-la réduire quelques minutes à feu vif. Parsème du reste des herbes et sers bien chaud avec du pain marocain (khobz)."
+    ],
+    "tip": "Ne sale presque pas ta marinade : le citron confit et les olives apportent déjà leur sel. Et garde la pulpe du citron pour la sauce d'une vinaigrette, rien ne se perd chez Papa Win."
+  },
+  {
+    "id": "tajine-kefta-win",
+    "name": "Tajine Kefta Win",
+    "originalName": "Tajine de kefta aux œufs",
+    "region": "maghreb",
+    "country": "Maroc",
+    "flag": "🇲🇦",
+    "emoji": "🧆",
+    "difficulty": "facile",
+    "tags": [
+      "epice",
+      "familial"
+    ],
+    "prepMinutes": 25,
+    "cookMinutes": 35,
+    "servings": 4,
+    "pitch": "Mon tajine kefta : des petites boulettes épicées qui font trempette dans une sauce tomate, et des œufs qui se posent dessus comme des rois. On mange à la main, avec du pain, et on ne se dispute pas pour le dernier jaune. Enfin, on essaie.",
+    "ingredients": [
+      {
+        "quantity": 600,
+        "unit": "g",
+        "name": "bœuf haché (ou moitié bœuf, moitié agneau)"
+      },
+      {
+        "quantity": 2,
+        "unit": null,
+        "name": "oignons"
+      },
+      {
+        "quantity": 3,
+        "unit": "gousses",
+        "name": "ail"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "bouquet",
+        "name": "persil plat"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "bouquet",
+        "name": "coriandre fraîche"
+      },
+      {
+        "quantity": 2,
+        "unit": "c. à café",
+        "name": "cumin moulu"
+      },
+      {
+        "quantity": 2,
+        "unit": "c. à café",
+        "name": "paprika doux"
+      },
+      {
+        "quantity": 1,
+        "unit": "pincée",
+        "name": "piment de Cayenne"
+      },
+      {
+        "quantity": 800,
+        "unit": "g",
+        "name": "tomates bien mûres (ou 2 boîtes de tomates concassées)"
+      },
+      {
+        "quantity": 4,
+        "unit": null,
+        "name": "œufs"
+      },
+      {
+        "quantity": 3,
+        "unit": "c. à soupe",
+        "name": "huile d'olive"
+      },
+      {
+        "quantity": null,
+        "unit": null,
+        "name": "sel, poivre"
+      }
+    ],
+    "steps": [
+      "Râpe un oignon et presse-le dans tes mains pour retirer son jus. Mélange-le avec la viande, la moitié des herbes hachées, 1 c. à café de cumin, 1 c. à café de paprika, du sel et du poivre. Malaxe 2 à 3 minutes.",
+      "Les mains mouillées, forme des boulettes de la taille d'une noix (environ 24). Réserve-les au frais le temps de préparer la sauce.",
+      "Dans un tajine ou une grande sauteuse avec couvercle, fais revenir l'autre oignon émincé et l'ail haché dans l'huile, 5 minutes à feu moyen. Ajoute les tomates râpées (ou concassées), le reste du cumin et du paprika, le piment et du sel. Laisse mijoter 15 minutes à feu moyen-doux.",
+      "Dépose les boulettes dans la sauce, couvre et laisse cuire 15 minutes à feu doux en les retournant délicatement à mi-cuisson.",
+      "Creuse 4 petits nids dans la sauce et casse un œuf dans chacun. Couvre et laisse cuire 5 à 7 minutes, jusqu'à ce que les blancs soient pris et les jaunes encore coulants.",
+      "Parsème du reste des herbes et sers directement dans le plat, avec du pain pour attraper la sauce. Chacun son coin, chacun son œuf."
+    ],
+    "tip": "Presse bien ton oignon râpé avant de le mettre dans la viande : sans son jus, tes kefta tiennent la route au lieu de s'effondrer comme un château de sable à marée haute."
+  },
+  {
+    "id": "tajine-agneau-win",
+    "name": "Tajine Agneau Win",
+    "originalName": "Tajine d'agneau aux pruneaux",
+    "region": "maghreb",
+    "country": "Maroc",
+    "flag": "🇲🇦",
+    "emoji": "🍖",
+    "difficulty": "moyen",
+    "tags": [
+      "mijote",
+      "familial"
+    ],
+    "prepMinutes": 20,
+    "cookMinutes": 120,
+    "servings": 6,
+    "pitch": "Mon tajine d'agneau aux pruneaux : une viande qui fond, des pruneaux brillants comme des bijoux et des amandes qui croquent. C'est le plat des grandes occasions, et chez moi, mardi soir est une grande occasion.",
+    "ingredients": [
+      {
+        "quantity": 1.2,
+        "unit": "kg",
+        "name": "épaule d'agneau avec os, en gros morceaux"
+      },
+      {
+        "quantity": 2,
+        "unit": null,
+        "name": "oignons"
+      },
+      {
+        "quantity": 300,
+        "unit": "g",
+        "name": "pruneaux dénoyautés"
+      },
+      {
+        "quantity": 1,
+        "unit": null,
+        "name": "bâton de cannelle"
+      },
+      {
+        "quantity": 1,
+        "unit": "c. à café",
+        "name": "cannelle moulue"
+      },
+      {
+        "quantity": 1,
+        "unit": "c. à café",
+        "name": "gingembre moulu"
+      },
+      {
+        "quantity": 1,
+        "unit": "pincée",
+        "name": "pistils de safran"
+      },
+      {
+        "quantity": 2,
+        "unit": "c. à soupe",
+        "name": "miel"
+      },
+      {
+        "quantity": 60,
+        "unit": "g",
+        "name": "amandes émondées"
+      },
+      {
+        "quantity": 1,
+        "unit": "c. à soupe",
+        "name": "graines de sésame"
+      },
+      {
+        "quantity": 30,
+        "unit": "g",
+        "name": "beurre ou smen"
+      },
+      {
+        "quantity": 3,
+        "unit": "c. à soupe",
+        "name": "huile d'olive"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "bouquet",
+        "name": "coriandre fraîche"
+      },
+      {
+        "quantity": null,
+        "unit": null,
+        "name": "sel, poivre"
+      }
+    ],
+    "steps": [
+      "Dans une cocotte ou un tajine, mets l'huile, le beurre, la viande, les oignons râpés, le gingembre, le safran, le bâton de cannelle, du sel et du poivre. Fais revenir 10 minutes à feu moyen en remuant pour bien enrober la viande d'épices.",
+      "Verse de l'eau à hauteur de la viande (environ 50 cl), ajoute quelques brins de coriandre, couvre et laisse mijoter 1 h 30 à feu doux. Jette un œil toutes les 30 minutes et rajoute un peu d'eau si besoin.",
+      "Pendant ce temps, fais tremper les pruneaux 15 minutes dans de l'eau tiède. Égoutte-les et mets-les dans une petite casserole avec une louche de sauce du tajine, le miel et la cannelle moulue. Laisse cuire 10 à 15 minutes à feu doux jusqu'à ce qu'ils soient brillants et sirupeux.",
+      "Fais dorer les amandes dans une poêle avec un filet d'huile, 3 à 4 minutes, puis torréfie les graines de sésame à sec 1 à 2 minutes : surveille-les, elles passent du doré au charbon en un clin d'œil.",
+      "Quand la viande se détache de l'os, retire le couvercle et laisse réduire la sauce 10 minutes jusqu'à ce qu'elle nappe la cuillère.",
+      "Dresse la viande, nappe-la de sauce, dispose les pruneaux et leur sirop par-dessus, puis parsème d'amandes et de sésame. Sers avec du pain."
+    ],
+    "tip": "Cuis toujours les pruneaux à part : dans la cocotte pendant 1 h 30, ils finiraient en confiture. Là, ils arrivent à table entiers, fiers et luisants, comme toi le jour de ton mariage."
+  },
+  {
+    "id": "chorba-win",
+    "name": "Chorba Win",
+    "originalName": "Chorba frik",
+    "region": "maghreb",
+    "country": "Algérie",
+    "flag": "🇩🇿",
+    "emoji": "🍲",
+    "difficulty": "moyen",
+    "tags": [
+      "mijote",
+      "familial"
+    ],
+    "prepMinutes": 20,
+    "cookMinutes": 80,
+    "servings": 6,
+    "pitch": "Ma chorba frik : une soupe qui sent la menthe, la coriandre et la maison de tes grands-parents. Une cuillère et tu te sens réconforté jusqu'aux chaussettes.",
+    "ingredients": [
+      {
+        "quantity": 500,
+        "unit": "g",
+        "name": "agneau (collier ou épaule) en petits cubes"
+      },
+      {
+        "quantity": 120,
+        "unit": "g",
+        "name": "frik (blé vert concassé)"
+      },
+      {
+        "quantity": 1,
+        "unit": null,
+        "name": "oignon"
+      },
+      {
+        "quantity": 2,
+        "unit": null,
+        "name": "tomates mûres"
+      },
+      {
+        "quantity": 2,
+        "unit": "c. à soupe",
+        "name": "concentré de tomate"
+      },
+      {
+        "quantity": 1,
+        "unit": "boîte",
+        "name": "pois chiches cuits (400 g)"
+      },
+      {
+        "quantity": 1,
+        "unit": null,
+        "name": "branche de céleri avec ses feuilles"
+      },
+      {
+        "quantity": 1,
+        "unit": "bouquet",
+        "name": "coriandre fraîche"
+      },
+      {
+        "quantity": 1,
+        "unit": "c. à café",
+        "name": "paprika"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "c. à café",
+        "name": "cannelle moulue"
+      },
+      {
+        "quantity": 1,
+        "unit": "c. à café",
+        "name": "menthe séchée"
+      },
+      {
+        "quantity": 3,
+        "unit": "c. à soupe",
+        "name": "huile d'olive"
+      },
+      {
+        "quantity": 1,
+        "unit": null,
+        "name": "citron"
+      },
+      {
+        "quantity": null,
+        "unit": null,
+        "name": "sel, poivre"
+      }
+    ],
+    "steps": [
+      "Dans une grande cocotte, fais revenir la viande avec l'oignon râpé dans l'huile d'olive, 10 minutes à feu moyen, jusqu'à ce que la viande soit bien colorée.",
+      "Ajoute les tomates râpées, le concentré de tomate, le paprika, la cannelle, le céleri haché, la moitié de la coriandre ciselée, du sel et du poivre. Mélange et laisse cuire 5 minutes.",
+      "Verse 2 l d'eau, porte à ébullition, puis couvre et laisse mijoter 45 minutes à feu doux.",
+      "Rince le frik à l'eau froide et verse-le en pluie dans la soupe avec les pois chiches égouttés. Laisse cuire 25 à 30 minutes en remuant souvent, car le frik adore s'accrocher au fond.",
+      "Hors du feu, émiette la menthe séchée entre tes doigts au-dessus de la cocotte et ajoute le reste de la coriandre. Rallonge d'un peu d'eau chaude si la chorba est trop épaisse.",
+      "Sers bien chaud avec des quartiers de citron à presser au dernier moment."
+    ],
+    "tip": "Remue ta chorba toutes les cinq minutes une fois le frik ajouté : il épaissit la soupe mais il colle comme un petit dernier qui veut un câlin. Et elle est encore meilleure réchauffée le lendemain."
+  },
+  {
+    "id": "harira-win",
+    "name": "Harira Win",
+    "originalName": "Harira",
+    "region": "maghreb",
+    "country": "Maroc",
+    "flag": "🇲🇦",
+    "emoji": "🍜",
+    "difficulty": "moyen",
+    "tags": [
+      "mijote",
+      "familial"
+    ],
+    "prepMinutes": 25,
+    "cookMinutes": 90,
+    "servings": 6,
+    "pitch": "Ma harira : des lentilles, des pois chiches, des tomates et une texture veloutée qui te tient au corps comme une couverture en laine. C'est la soupe qui rassemble toute la famille autour de la table.",
+    "ingredients": [
+      {
+        "quantity": 300,
+        "unit": "g",
+        "name": "agneau ou bœuf en petits cubes"
+      },
+      {
+        "quantity": 100,
+        "unit": "g",
+        "name": "lentilles vertes ou brunes"
+      },
+      {
+        "quantity": 150,
+        "unit": "g",
+        "name": "pois chiches secs trempés la veille (ou 1 boîte de 400 g)"
+      },
+      {
+        "quantity": 1,
+        "unit": null,
+        "name": "oignon"
+      },
+      {
+        "quantity": 1,
+        "unit": null,
+        "name": "branche de céleri"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "bouquet",
+        "name": "coriandre fraîche"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "bouquet",
+        "name": "persil plat"
+      },
+      {
+        "quantity": 800,
+        "unit": "g",
+        "name": "tomates mûres"
+      },
+      {
+        "quantity": 2,
+        "unit": "c. à soupe",
+        "name": "concentré de tomate"
+      },
+      {
+        "quantity": 50,
+        "unit": "g",
+        "name": "vermicelles"
+      },
+      {
+        "quantity": 3,
+        "unit": "c. à soupe",
+        "name": "farine"
+      },
+      {
+        "quantity": 1,
+        "unit": "c. à café",
+        "name": "gingembre moulu"
+      },
+      {
+        "quantity": 1,
+        "unit": "c. à café",
+        "name": "curcuma"
+      },
+      {
+        "quantity": 30,
+        "unit": "g",
+        "name": "smen ou beurre"
+      },
+      {
+        "quantity": 1,
+        "unit": null,
+        "name": "citron"
+      },
+      {
+        "quantity": null,
+        "unit": null,
+        "name": "sel, poivre"
+      }
+    ],
+    "steps": [
+      "Dans une grande cocotte, fais fondre le smen et fais revenir la viande avec l'oignon et le céleri hachés, la moitié des herbes ciselées, le gingembre, le curcuma et du poivre, 10 minutes à feu moyen.",
+      "Ajoute les lentilles rincées et les pois chiches égouttés (si tu utilises des pois chiches en boîte, garde-les pour l'étape suivante). Verse 2 l d'eau, porte à ébullition, couvre et laisse mijoter 40 minutes à feu doux.",
+      "Mixe les tomates avec le concentré de tomate et verse-les dans la cocotte. Laisse cuire 20 minutes de plus.",
+      "Ajoute les vermicelles et le reste des herbes, puis laisse cuire 5 minutes.",
+      "Prépare la tadouira : fouette la farine avec 25 cl d'eau froide jusqu'à ce qu'il n'y ait plus aucun grumeau. Verse-la en filet dans la soupe frémissante sans jamais arrêter de remuer, puis laisse épaissir 10 minutes à feu doux en remuant régulièrement.",
+      "Sale seulement maintenant, goûte et sers bien chaud avec un quartier de citron et, comme le veut la tradition, quelques dattes à côté."
+    ],
+    "tip": "Pour la tadouira, farine dans l'eau froide et jamais l'inverse, puis verse en remuant comme si tu dirigeais un orchestre. Sinon, tu auras une harira avec des surprises, et pas les bonnes."
+  },
+  {
+    "id": "loubia-win",
+    "name": "Loubia Win",
+    "originalName": "Loubia (haricots blancs en sauce)",
+    "region": "maghreb",
+    "country": "Algérie",
+    "flag": "🇩🇿",
+    "emoji": "🫘",
+    "difficulty": "facile",
+    "tags": [
+      "vegetarien",
+      "mijote",
+      "epice",
+      "familial"
+    ],
+    "prepMinutes": 15,
+    "cookMinutes": 90,
+    "servings": 6,
+    "pitch": "Ma loubia : des haricots blancs tout fondants dans une sauce tomate au cumin qui sent bon jusque dans l'escalier. Le plat qui ne coûte presque rien et qui fait le bonheur de tout le monde.",
+    "ingredients": [
+      {
+        "quantity": 500,
+        "unit": "g",
+        "name": "haricots blancs secs (lingots ou cocos)"
+      },
+      {
+        "quantity": 1,
+        "unit": null,
+        "name": "oignon"
+      },
+      {
+        "quantity": 4,
+        "unit": "gousses",
+        "name": "ail"
+      },
+      {
+        "quantity": 1,
+        "unit": "boîte",
+        "name": "tomates concassées (400 g)"
+      },
+      {
+        "quantity": 2,
+        "unit": "c. à soupe",
+        "name": "concentré de tomate"
+      },
+      {
+        "quantity": 2,
+        "unit": "c. à café",
+        "name": "cumin moulu"
+      },
+      {
+        "quantity": 2,
+        "unit": "c. à café",
+        "name": "paprika"
+      },
+      {
+        "quantity": 1,
+        "unit": "pincée",
+        "name": "piment de Cayenne"
+      },
+      {
+        "quantity": 2,
+        "unit": "feuilles",
+        "name": "laurier"
+      },
+      {
+        "quantity": 4,
+        "unit": "c. à soupe",
+        "name": "huile d'olive"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "bouquet",
+        "name": "coriandre ou persil"
+      },
+      {
+        "quantity": null,
+        "unit": null,
+        "name": "sel, poivre"
+      }
+    ],
+    "steps": [
+      "La veille, fais tremper les haricots dans un grand volume d'eau froide. Le jour même, égoutte-les et rince-les.",
+      "Dans une cocotte, fais revenir l'oignon émincé et l'ail haché dans l'huile d'olive, 5 minutes à feu moyen. Ajoute 1 c. à café de cumin, le paprika et le piment, puis remue 1 minute pour réveiller les épices.",
+      "Ajoute les tomates concassées et le concentré de tomate, et laisse cuire 5 minutes.",
+      "Verse les haricots, le laurier et environ 1,5 l d'eau (elle doit les dépasser de 3 cm). Porte à ébullition, couvre et laisse mijoter 1 h 15 à 1 h 30 à feu doux. Sale seulement après la première heure.",
+      "Vérifie la cuisson : un haricot doit s'écraser facilement. Si la sauce est trop liquide, retire le couvercle 10 minutes et écrase une louche de haricots contre la paroi pour l'épaissir.",
+      "Ajoute le reste du cumin et les herbes ciselées, arrose d'un filet d'huile d'olive et sers avec du pain bien frais."
+    ],
+    "tip": "Remets une pincée de cumin à la fin : il donne du parfum et aide à digérer les haricots, et toute la famille te remerciera pendant la soirée. Et si tu es pressé, deux bocaux de haricots cuits font l'affaire, en 20 minutes de mijotage."
+  },
+  {
+    "id": "chakchouka-win",
+    "name": "Chakchouka Win",
+    "originalName": "Chakchouka",
+    "region": "maghreb",
+    "country": "Tunisie",
+    "flag": "🇹🇳",
+    "emoji": "🍳",
+    "difficulty": "facile",
+    "tags": [
+      "vegetarien",
+      "epice",
+      "familial"
+    ],
+    "prepMinutes": 15,
+    "cookMinutes": 30,
+    "servings": 4,
+    "pitch": "Ma chakchouka : des poivrons fondants, des tomates, une pointe de harissa et des œufs qui viennent faire la sieste dessus. Une poêle au milieu de la table, du pain pour tout le monde, et le bonheur est servi.",
+    "ingredients": [
+      {
+        "quantity": 3,
+        "unit": null,
+        "name": "poivrons verts ou rouges"
+      },
+      {
+        "quantity": 1,
+        "unit": null,
+        "name": "piment vert"
+      },
+      {
+        "quantity": 1,
+        "unit": null,
+        "name": "oignon"
+      },
+      {
+        "quantity": 3,
+        "unit": "gousses",
+        "name": "ail"
+      },
+      {
+        "quantity": 600,
+        "unit": "g",
+        "name": "tomates mûres"
+      },
+      {
+        "quantity": 1,
+        "unit": "c. à soupe",
+        "name": "concentré de tomate"
+      },
+      {
+        "quantity": 1,
+        "unit": "c. à café",
+        "name": "harissa"
+      },
+      {
+        "quantity": 1,
+        "unit": "c. à café",
+        "name": "carvi moulu (karwiya)"
+      },
+      {
+        "quantity": 1,
+        "unit": "c. à café",
+        "name": "paprika"
+      },
+      {
+        "quantity": 4,
+        "unit": null,
+        "name": "œufs"
+      },
+      {
+        "quantity": 4,
+        "unit": "c. à soupe",
+        "name": "huile d'olive"
+      },
+      {
+        "quantity": null,
+        "unit": null,
+        "name": "sel, poivre"
+      }
+    ],
+    "steps": [
+      "Épépine les poivrons et le piment, puis taille-les en lanières. Émince l'oignon, hache l'ail et coupe les tomates en dés.",
+      "Dans une grande poêle, chauffe l'huile d'olive et fais revenir l'oignon 3 minutes à feu moyen. Ajoute la harissa, le concentré de tomate, le carvi et le paprika, et remue 1 minute pour que les épices infusent dans l'huile.",
+      "Ajoute les poivrons, le piment et l'ail, et laisse fondre 10 minutes en remuant de temps en temps.",
+      "Ajoute les tomates, sale, poivre, et laisse mijoter 10 minutes à feu moyen-doux jusqu'à obtenir une sauce épaisse.",
+      "Creuse 4 nids dans la sauce, casse un œuf dans chacun, couvre et laisse cuire 5 à 6 minutes : les blancs doivent être pris et les jaunes encore coulants.",
+      "Sers directement dans la poêle avec du pain pour saucer. Ici, la fourchette est facultative."
+    ],
+    "tip": "Fais revenir la harissa et les épices dans l'huile avant d'ajouter les légumes : c'est là qu'elles libèrent tout leur parfum. Et mets le couvercle pour les œufs, sinon le dessus reste cru pendant que le dessous fait des heures sup'."
+  },
+  {
+    "id": "zaalouk-win",
+    "name": "Zaalouk Win",
+    "originalName": "Zaalouk d'aubergines",
+    "region": "maghreb",
+    "country": "Maroc",
+    "flag": "🇲🇦",
+    "emoji": "🍆",
+    "difficulty": "facile",
+    "tags": [
+      "vegetarien",
+      "four",
+      "familial"
+    ],
+    "prepMinutes": 15,
+    "cookMinutes": 50,
+    "servings": 4,
+    "pitch": "Mon zaalouk : des aubergines rôties, des tomates, de l'ail et du cumin, écrasés ensemble en une compotée fumée qu'on tartine sur du pain. Même les ennemis jurés de l'aubergine finissent par demander la recette.",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": null,
+        "name": "grosses aubergines (environ 800 g)"
+      },
+      {
+        "quantity": 4,
+        "unit": null,
+        "name": "tomates mûres"
+      },
+      {
+        "quantity": 3,
+        "unit": "gousses",
+        "name": "ail"
+      },
+      {
+        "quantity": 1,
+        "unit": "c. à café",
+        "name": "cumin moulu"
+      },
+      {
+        "quantity": 1,
+        "unit": "c. à café",
+        "name": "paprika"
+      },
+      {
+        "quantity": 1,
+        "unit": "pincée",
+        "name": "piment de Cayenne"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "bouquet",
+        "name": "coriandre fraîche"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "bouquet",
+        "name": "persil plat"
+      },
+      {
+        "quantity": 4,
+        "unit": "c. à soupe",
+        "name": "huile d'olive"
+      },
+      {
+        "quantity": 0.5,
+        "unit": null,
+        "name": "citron (le jus)"
+      },
+      {
+        "quantity": null,
+        "unit": null,
+        "name": "sel, poivre"
+      }
+    ],
+    "steps": [
+      "Préchauffe le four à 220 °C. Pique les aubergines à la fourchette et fais-les rôtir 35 à 40 minutes sur une plaque, en les retournant à mi-cuisson, jusqu'à ce qu'elles soient fondantes et la peau bien noircie.",
+      "Pendant ce temps, ébouillante les tomates 30 secondes, pèle-les, épépine-les et coupe-les en petits dés.",
+      "Dans une sauteuse, fais revenir l'ail haché dans 2 c. à soupe d'huile 1 minute, puis ajoute les tomates et laisse cuire 10 minutes à feu moyen.",
+      "Récupère la chair des aubergines à la cuillère, hache-la grossièrement et ajoute-la dans la sauteuse avec le cumin, le paprika, le piment, les herbes ciselées, du sel et du poivre.",
+      "Laisse cuire 10 à 15 minutes à feu doux en écrasant à la fourchette, jusqu'à obtenir une compotée qui se tient.",
+      "Hors du feu, ajoute le jus de citron et le reste de l'huile d'olive. Sers tiède ou froid, avec du pain pour tartiner."
+    ],
+    "tip": "Pour un vrai goût fumé, fais griller les aubergines directement sur la flamme du gaz en les tournant avec une pince : ta cuisine sentira le barbecue en plein hiver. Et prépare-le la veille, le zaalouk est encore meilleur le lendemain."
+  },
+  {
+    "id": "rfissa-win",
+    "name": "Rfissa Win",
+    "originalName": "Rfissa au poulet",
+    "region": "maghreb",
+    "country": "Maroc",
+    "flag": "🇲🇦",
+    "emoji": "🫓",
+    "difficulty": "difficile",
+    "tags": [
+      "mijote",
+      "epice",
+      "familial"
+    ],
+    "prepMinutes": 30,
+    "cookMinutes": 90,
+    "servings": 6,
+    "pitch": "Ma rfissa : des msemen effilochées qui boivent un bouillon au fenugrec et au ras el hanout, avec un poulet qui se détache tout seul. C'est le plat des grandes fêtes de famille, alors j'en fais pour une armée.",
+    "ingredients": [
+      {
+        "quantity": 1,
+        "unit": null,
+        "name": "poulet fermier d'environ 1,5 kg, coupé en morceaux"
+      },
+      {
+        "quantity": 4,
+        "unit": null,
+        "name": "oignons"
+      },
+      {
+        "quantity": 2,
+        "unit": "gousses",
+        "name": "ail"
+      },
+      {
+        "quantity": 100,
+        "unit": "g",
+        "name": "lentilles vertes ou brunes"
+      },
+      {
+        "quantity": 3,
+        "unit": "c. à soupe",
+        "name": "graines de fenugrec (helba)"
+      },
+      {
+        "quantity": 2,
+        "unit": "c. à café",
+        "name": "ras el hanout"
+      },
+      {
+        "quantity": 1,
+        "unit": "c. à café",
+        "name": "gingembre moulu"
+      },
+      {
+        "quantity": 1,
+        "unit": "pincée",
+        "name": "pistils de safran"
+      },
+      {
+        "quantity": 1,
+        "unit": "bouquet",
+        "name": "coriandre et persil mélangés"
+      },
+      {
+        "quantity": 8,
+        "unit": null,
+        "name": "msemen (crêpes feuilletées, faites maison ou achetées)"
+      },
+      {
+        "quantity": 40,
+        "unit": "g",
+        "name": "smen ou beurre"
+      },
+      {
+        "quantity": 4,
+        "unit": "c. à soupe",
+        "name": "huile d'olive"
+      },
+      {
+        "quantity": null,
+        "unit": null,
+        "name": "sel, poivre"
+      }
+    ],
+    "steps": [
+      "La veille (ou au moins 2 heures avant), fais tremper les graines de fenugrec dans de l'eau chaude, et les lentilles dans de l'eau froide pendant 1 heure.",
+      "Frotte les morceaux de poulet avec l'ail écrasé, le ras el hanout, le gingembre, le safran, du sel et du poivre. Laisse reposer 30 minutes.",
+      "Dans une grande cocotte, fais revenir le poulet et les oignons émincés dans l'huile et le smen, 10 minutes à feu moyen. Ajoute le fenugrec égoutté, le bouquet d'herbes ficelé et 1,5 l d'eau. Porte à ébullition, couvre et laisse mijoter 45 minutes à feu doux.",
+      "Ajoute les lentilles égouttées et poursuis la cuisson 30 minutes : le poulet doit se détacher de l'os et les lentilles être tendres. Le bouillon doit rester généreux, rajoute de l'eau chaude si besoin.",
+      "Réchauffe les msemen à la poêle, puis déchire-les en lanières d'environ 2 cm. Dispose-les dans le panier du couscoussier (ou une passoire) au-dessus du bouillon frémissant et laisse-les s'imprégner de vapeur 10 minutes.",
+      "Étale les msemen dans un grand plat creux, arrose-les généreusement de bouillon, puis dépose le poulet, les oignons, les lentilles et le fenugrec par-dessus. Sers bien chaud, avec un bol de bouillon supplémentaire pour les gourmands."
+    ],
+    "tip": "Fais bien tremper le fenugrec : sec, il est aussi amer qu'un supporter après une défaite, trempé il devient doux et parfumé. Pas le temps de faire les msemen ? Ceux de l'épicerie orientale feront très bien l'affaire."
+  },
+  {
+    "id": "brik-win-au-thon",
+    "name": "Brik Win au Thon",
+    "originalName": "Brik à l'œuf et au thon",
+    "region": "maghreb",
+    "country": "Tunisie",
+    "flag": "🇹🇳",
+    "emoji": "🥟",
+    "difficulty": "moyen",
+    "tags": [
+      "rapide",
+      "poisson",
+      "familial"
+    ],
+    "prepMinutes": 15,
+    "cookMinutes": 10,
+    "servings": 4,
+    "pitch": "Ma brik : une feuille croustillante, du thon, des câpres et un œuf dont le jaune coule juste ce qu'il faut. Il paraît que si tu la manges sans en mettre sur ton menton, tu peux te marier. Moi, je m'entraîne encore.",
+    "ingredients": [
+      {
+        "quantity": 4,
+        "unit": "feuilles",
+        "name": "brick (malsouka)"
+      },
+      {
+        "quantity": 4,
+        "unit": null,
+        "name": "œufs"
+      },
+      {
+        "quantity": 1,
+        "unit": "boîte",
+        "name": "thon à l'huile (environ 160 g)"
+      },
+      {
+        "quantity": 1,
+        "unit": null,
+        "name": "pomme de terre cuite à l'eau"
+      },
+      {
+        "quantity": 0.5,
+        "unit": null,
+        "name": "oignon"
+      },
+      {
+        "quantity": 1,
+        "unit": "c. à soupe",
+        "name": "câpres"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "bouquet",
+        "name": "persil plat"
+      },
+      {
+        "quantity": 1,
+        "unit": "c. à café",
+        "name": "harissa (facultatif)"
+      },
+      {
+        "quantity": 50,
+        "unit": "cl",
+        "name": "huile de friture"
+      },
+      {
+        "quantity": 1,
+        "unit": null,
+        "name": "citron"
+      },
+      {
+        "quantity": null,
+        "unit": null,
+        "name": "sel, poivre"
+      }
+    ],
+    "steps": [
+      "Prépare la farce : émiette le thon égoutté, écrase la pomme de terre, puis mélange avec l'oignon et le persil finement hachés, les câpres, la harissa, du sel et du poivre.",
+      "Chauffe 2 cm d'huile dans une grande poêle à feu moyen-vif, jusqu'à environ 170 °C (un petit morceau de feuille doit grésiller aussitôt).",
+      "Pose une feuille de brick sur une assiette. Dépose un quart de la farce au centre en formant un petit nid, puis casse un œuf au milieu.",
+      "Replie la feuille en deux pour former une demi-lune, appuie doucement sur les bords et fais-la glisser immédiatement dans l'huile.",
+      "Fais frire 1 à 2 minutes de chaque côté en arrosant le dessus d'huile, jusqu'à ce que la brik soit bien dorée et le jaune encore coulant. Égoutte sur du papier absorbant.",
+      "Recommence avec les autres feuilles, une à une, et sers aussitôt avec des quartiers de citron."
+    ],
+    "tip": "Prépare tes briks une par une et seulement quand l'huile est chaude : une feuille garnie qui attend devient molle et se déchire. Et attaque-la par un coin en la tenant à la main, le jaune viendra à toi."
+  },
+  {
+    "id": "mechoui-win",
+    "name": "Méchoui Win",
+    "originalName": "Méchoui d'agneau (épaule au four, version maison)",
+    "region": "maghreb",
+    "country": "Maroc",
+    "flag": "🇲🇦",
+    "emoji": "🍖",
+    "difficulty": "facile",
+    "tags": [
+      "four",
+      "mijote",
+      "epice",
+      "familial"
+    ],
+    "prepMinutes": 20,
+    "cookMinutes": 240,
+    "servings": 6,
+    "pitch": "Mon méchoui maison : une épaule d'agneau massée au beurre et au cumin, cuite tout doucement jusqu'à ce qu'elle se détache à la cuillère. Pas besoin de creuser un trou dans le jardin, ton four fait le travail pendant que tu fais la sieste.",
+    "ingredients": [
+      {
+        "quantity": 1,
+        "unit": null,
+        "name": "épaule d'agneau avec os (environ 2 kg)"
+      },
+      {
+        "quantity": 80,
+        "unit": "g",
+        "name": "beurre mou ou smen"
+      },
+      {
+        "quantity": 4,
+        "unit": "gousses",
+        "name": "ail"
+      },
+      {
+        "quantity": 2,
+        "unit": "c. à café",
+        "name": "cumin moulu"
+      },
+      {
+        "quantity": 2,
+        "unit": "c. à café",
+        "name": "paprika doux"
+      },
+      {
+        "quantity": 1,
+        "unit": "c. à café",
+        "name": "coriandre moulue"
+      },
+      {
+        "quantity": 1,
+        "unit": "pincée",
+        "name": "pistils de safran"
+      },
+      {
+        "quantity": 25,
+        "unit": "cl",
+        "name": "eau"
+      },
+      {
+        "quantity": 2,
+        "unit": "c. à soupe",
+        "name": "cumin et sel fin mélangés, pour servir"
+      },
+      {
+        "quantity": null,
+        "unit": null,
+        "name": "sel, poivre"
+      }
+    ],
+    "steps": [
+      "Sors l'épaule du réfrigérateur 1 heure avant la cuisson. Préchauffe le four à 150 °C.",
+      "Écrase l'ail et mélange-le avec le beurre mou, le cumin, le paprika, la coriandre, le safran, 2 c. à café de sel et du poivre.",
+      "Pratique quelques entailles dans la viande avec la pointe d'un couteau, puis masse généreusement toute l'épaule avec ce beurre épicé, en le faisant pénétrer dans les entailles.",
+      "Pose l'épaule dans un plat à rôtir, verse l'eau au fond, couvre hermétiquement de papier aluminium et enfourne pour 3 h 30. Arrose avec le jus toutes les 45 minutes et rajoute un peu d'eau si le fond sèche.",
+      "Retire l'aluminium, monte le four à 220 °C et laisse dorer 20 à 30 minutes en arrosant deux fois, jusqu'à obtenir une croûte bien caramélisée.",
+      "Laisse reposer 10 minutes, puis effiloche la viande à la main ou à la fourchette. Sers avec le mélange cumin-sel pour tremper chaque bouchée, du pain et une salade de tomates."
+    ],
+    "tip": "Le secret du méchoui, c'est la patience : four doux et couvercle d'alu, sinon tu obtiens une semelle épicée. La viande est prête quand elle se détache de l'os rien qu'en la regardant (bon, avec une cuillère, quand même)."
+  },
+  {
+    "id": "mderbel-win",
+    "name": "M'derbel Win",
+    "originalName": "M'derbel d'aubergines",
+    "region": "maghreb",
+    "country": "Algérie",
+    "flag": "🇩🇿",
+    "emoji": "🍅",
+    "difficulty": "facile",
+    "tags": [
+      "vegetarien",
+      "epice",
+      "familial"
+    ],
+    "prepMinutes": 20,
+    "cookMinutes": 40,
+    "servings": 4,
+    "pitch": "Mon m'derbel : des rondelles d'aubergines dorées qui mijotent dans une sauce tomate à l'ail et au carvi, avec une pointe de vinaigre qui réveille tout. Chaud, tiède ou froid le lendemain, il trouve toujours preneur.",
+    "ingredients": [
+      {
+        "quantity": 3,
+        "unit": null,
+        "name": "aubergines"
+      },
+      {
+        "quantity": 4,
+        "unit": null,
+        "name": "tomates mûres"
+      },
+      {
+        "quantity": 4,
+        "unit": "gousses",
+        "name": "ail"
+      },
+      {
+        "quantity": 1,
+        "unit": "c. à soupe",
+        "name": "concentré de tomate"
+      },
+      {
+        "quantity": 1,
+        "unit": "c. à café",
+        "name": "carvi moulu (karwiya)"
+      },
+      {
+        "quantity": 1,
+        "unit": "c. à café",
+        "name": "paprika"
+      },
+      {
+        "quantity": 1,
+        "unit": "pincée",
+        "name": "piment de Cayenne"
+      },
+      {
+        "quantity": 2,
+        "unit": "c. à soupe",
+        "name": "vinaigre de vin"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "bouquet",
+        "name": "persil plat"
+      },
+      {
+        "quantity": 50,
+        "unit": "cl",
+        "name": "huile de friture"
+      },
+      {
+        "quantity": 3,
+        "unit": "c. à soupe",
+        "name": "huile d'olive"
+      },
+      {
+        "quantity": null,
+        "unit": null,
+        "name": "sel, poivre"
+      }
+    ],
+    "steps": [
+      "Coupe les aubergines en rondelles de 1 cm, sale-les et laisse-les dégorger 30 minutes dans une passoire. Rince-les rapidement et sèche-les bien dans un torchon.",
+      "Fais frire les rondelles dans l'huile chauffée à 170 °C, 2 à 3 minutes de chaque côté, jusqu'à ce qu'elles soient bien dorées. Égoutte-les sur du papier absorbant. (Version plus légère : badigeonne-les d'huile et fais-les dorer 20 minutes au four à 200 °C.)",
+      "Dans une sauteuse, chauffe l'huile d'olive et fais revenir l'ail écrasé avec le carvi, le paprika et le piment, 1 minute à feu doux.",
+      "Ajoute les tomates râpées, le concentré de tomate et 15 cl d'eau. Sale, poivre et laisse mijoter 15 minutes à feu moyen.",
+      "Dépose les aubergines dans la sauce, ajoute le vinaigre, couvre et laisse mijoter 15 minutes à feu doux en secouant la sauteuse plutôt qu'en remuant, pour garder les rondelles entières.",
+      "Parsème de persil haché et sers chaud, tiède ou froid, avec du pain."
+    ],
+    "tip": "Fais bien dégorger et sécher tes aubergines avant de les frire : sinon elles boivent l'huile comme une éponge et ton m'derbel nage. Et le lendemain, il est encore meilleur, alors prévois-en un peu plus."
+  },
+  {
+    "id": "berkoukes-win",
+    "name": "Berkoukes Win",
+    "originalName": "Berkoukes aux légumes",
+    "region": "maghreb",
+    "country": "Algérie",
+    "flag": "🇩🇿",
+    "emoji": "🥕",
+    "difficulty": "facile",
+    "tags": [
+      "vegetarien",
+      "epice",
+      "familial"
+    ],
+    "prepMinutes": 20,
+    "cookMinutes": 50,
+    "servings": 6,
+    "pitch": "Mon berkoukes : des gros grains de pâte qui mijotent avec plein de légumes dans un bouillon tomaté et parfumé à la menthe. C'est la soupe-plat de l'hiver, celle qui réchauffe les mains et le cœur en même temps.",
+    "ingredients": [
+      {
+        "quantity": 400,
+        "unit": "g",
+        "name": "berkoukes (gros couscous, aussi appelé plombs)"
+      },
+      {
+        "quantity": 1,
+        "unit": null,
+        "name": "oignon"
+      },
+      {
+        "quantity": 2,
+        "unit": "gousses",
+        "name": "ail"
+      },
+      {
+        "quantity": 2,
+        "unit": null,
+        "name": "carottes"
+      },
+      {
+        "quantity": 2,
+        "unit": null,
+        "name": "courgettes"
+      },
+      {
+        "quantity": 1,
+        "unit": null,
+        "name": "pomme de terre"
+      },
+      {
+        "quantity": 2,
+        "unit": null,
+        "name": "tomates mûres"
+      },
+      {
+        "quantity": 1,
+        "unit": "boîte",
+        "name": "pois chiches cuits (400 g)"
+      },
+      {
+        "quantity": 2,
+        "unit": "c. à soupe",
+        "name": "concentré de tomate"
+      },
+      {
+        "quantity": 1,
+        "unit": "c. à café",
+        "name": "paprika"
+      },
+      {
+        "quantity": 1,
+        "unit": "c. à café",
+        "name": "ras el hanout"
+      },
+      {
+        "quantity": 1,
+        "unit": "pincée",
+        "name": "piment de Cayenne"
+      },
+      {
+        "quantity": 1,
+        "unit": "c. à café",
+        "name": "menthe séchée"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "bouquet",
+        "name": "coriandre fraîche"
+      },
+      {
+        "quantity": 3,
+        "unit": "c. à soupe",
+        "name": "huile d'olive"
+      },
+      {
+        "quantity": null,
+        "unit": null,
+        "name": "sel, poivre"
+      }
+    ],
+    "steps": [
+      "Épluche les carottes et la pomme de terre, puis coupe-les en petits dés avec les courgettes. Râpe les tomates et émince l'oignon.",
+      "Dans une grande marmite, fais revenir l'oignon et l'ail haché dans l'huile d'olive, 5 minutes à feu moyen. Ajoute le concentré de tomate, les tomates râpées, le paprika, le ras el hanout et le piment, et laisse cuire 3 minutes.",
+      "Ajoute les carottes et la pomme de terre, verse 1,5 l d'eau, sale, poivre et porte à ébullition. Laisse cuire 15 minutes à feu moyen.",
+      "Verse le berkoukes en pluie avec les courgettes et les pois chiches égouttés. Laisse cuire 20 à 25 minutes à feu doux en remuant régulièrement, jusqu'à ce que les grains soient tendres.",
+      "Rajoute un peu d'eau chaude si besoin : le résultat doit ressembler à une soupe bien épaisse, pas à du béton. Hors du feu, ajoute la menthe séchée émiettée et la coriandre ciselée.",
+      "Laisse reposer 5 minutes à couvert et sers bien chaud, avec un peu de harissa ou de piment pour ceux qui aiment."
+    ],
+    "tip": "Le berkoukes boit le bouillon comme un marathonien à l'arrivée : garde toujours une bouilloire d'eau chaude à côté pour rallonger. Pour le réchauffer le lendemain, ajoute une louche d'eau, il aura tout absorbé pendant la nuit."
+  },
+  {
+    "id": "tajine-sardinwin",
+    "name": "Tajine Sardin'Win",
+    "originalName": "Tajine de boulettes de sardines",
+    "region": "maghreb",
+    "country": "Maroc",
+    "flag": "🇲🇦",
+    "emoji": "🐟",
+    "difficulty": "moyen",
+    "tags": [
+      "poisson",
+      "epice",
+      "familial"
+    ],
+    "prepMinutes": 40,
+    "cookMinutes": 30,
+    "servings": 4,
+    "pitch": "Mon tajine de sardines : des boulettes parfumées à la chermoula qui mijotent dans une sauce tomate, comme dans les ports de la côte atlantique. Même ceux qui disent « les sardines, très peu pour moi » saucent le plat.",
+    "ingredients": [
+      {
+        "quantity": 1,
+        "unit": "kg",
+        "name": "sardines fraîches (ou 600 g de filets)"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "bouquet",
+        "name": "coriandre fraîche"
+      },
+      {
+        "quantity": 0.5,
+        "unit": "bouquet",
+        "name": "persil plat"
+      },
+      {
+        "quantity": 4,
+        "unit": "gousses",
+        "name": "ail"
+      },
+      {
+        "quantity": 2,
+        "unit": "c. à café",
+        "name": "cumin moulu"
+      },
+      {
+        "quantity": 2,
+        "unit": "c. à café",
+        "name": "paprika doux"
+      },
+      {
+        "quantity": 1,
+        "unit": "pincée",
+        "name": "piment de Cayenne"
+      },
+      {
+        "quantity": 1,
+        "unit": null,
+        "name": "citron"
+      },
+      {
+        "quantity": 3,
+        "unit": "c. à soupe",
+        "name": "riz rond cuit"
+      },
+      {
+        "quantity": 1,
+        "unit": null,
+        "name": "oignon"
+      },
+      {
+        "quantity": 600,
+        "unit": "g",
+        "name": "tomates mûres"
+      },
+      {
+        "quantity": 4,
+        "unit": "c. à soupe",
+        "name": "huile d'olive"
+      },
+      {
+        "quantity": null,
+        "unit": null,
+        "name": "sel, poivre"
+      }
+    ],
+    "steps": [
+      "Écaille et vide les sardines, retire la tête, puis ouvre-les en appuyant le long de l'arête centrale pour la retirer. Rince les filets et sèche-les. (Ton poissonnier peut le faire pour toi, il suffit de sourire.)",
+      "Prépare la chermoula : mélange les herbes et l'ail hachés, le cumin, le paprika, le piment, le jus du citron, 2 c. à soupe d'huile, du sel et du poivre. Réserve un tiers de cette chermoula pour la sauce.",
+      "Hache finement les sardines au couteau ou au mixeur par petites impulsions. Mélange-les avec les deux tiers de chermoula et le riz cuit. Les mains mouillées, forme des boulettes de la taille d'une noix et laisse-les raffermir 20 minutes au frais.",
+      "Dans un tajine ou une sauteuse, fais revenir l'oignon émincé dans le reste de l'huile 3 minutes. Ajoute les tomates râpées, la chermoula réservée et 15 cl d'eau, puis laisse mijoter 10 minutes à feu moyen.",
+      "Dépose les boulettes dans la sauce, couvre et laisse cuire 15 à 20 minutes à feu doux. Ne remue pas : secoue doucement le plat par les anses pour napper les boulettes.",
+      "Sers directement dans le tajine avec du pain et quelques rondelles de citron."
+    ],
+    "tip": "Laisse bien raffermir tes boulettes au frais et ne les touche plus à la cuillère une fois dans la sauce : une boulette de sardine bousculée devient une sauce de sardine. Et le riz cuit dans la farce, c'est le liant de grand-mère qui les garde moelleuses."
+  }
+]
