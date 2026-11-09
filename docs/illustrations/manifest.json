@@ -1,0 +1,386 @@
+{
+  "_lisez_moi": "Suivi des illustrations. Statuts : manquante, provisoire, a_verifier, definitive. Ne passer une recette en 'definitive' qu'après vérification visuelle (bon plat, sans texte, sans personnage). Outil : python3 scripts/illustrations.py",
+  "specification": {
+    "recettes": {
+      "formats": [
+        "jpeg",
+        "png"
+      ],
+      "largeur_min": 1200,
+      "hauteur_min": 900,
+      "format_conseille": "JPEG 1600 × 1200 (4:3), qualité 85",
+      "ratio_min": 1.2,
+      "ratio_max": 1.6,
+      "poids_max_octets": 4000000,
+      "bits_par_pixel_min": 0.5,
+      "transparence": false
+    },
+    "mascotte": {
+      "hd_cote_min": 1024,
+      "portrait_rond_transparent": true
+    },
+    "icone": {
+      "format": "png",
+      "taille": 1024,
+      "transparence": false
+    }
+  },
+  "mascotte": {
+    "reference": "CuisinerCommePapaWin/Resources/Assets.xcassets/papa_win.imageset/papa_win.jpg",
+    "source_hd": false,
+    "note": "Original validé en 256 × 256 : papa_win_hd, papa_win_round et l'icône sont interpolés. Fournir l'original HD puis relancer design/mascotte/generer_mascotte.py."
+  },
+  "empreintes_vignettes_provisoires": [
+    "0746d705bcdcdbb70c0d55e076f475bb7bfa8e68fefee3b90c5e1a12ff6733be",
+    "105eb3b70b7412a578e5ee73bff5285ad4ccbfe42e31963456f2cc83ff9adab8",
+    "13e36826ba059de88d824d1bae34cd018013a45ccf16c13ab3bc3cd07e247cc5",
+    "1ac5ebda2b133e9d38fcf869fdb2a593c09f6bec3bfc04d30846d6519fd69ab8",
+    "1c04212427a3979a94d1f2821066c53c4ea9fa033bf63963e3bf82dd8fb92157",
+    "1dd8f00be1633188c7862cd754a6e72f62b2883981119cfc14e93061a1f631a4",
+    "1f05990f23be3c8e2f7b5ead45c6695d10d33d91454ea4ff1d20829db5aa9c3e",
+    "210c8ab5db2a5e85363977f1e1138baf2563365b92050cd9878ae60e8c73d814",
+    "22c5c68b0c9cda6049cd0b991c392f015c605edcbc52f99dd9f27f866abee54f",
+    "319dbf995f464f1137112a42b874029ec1b40ac627077f9a06591b7af66e10b2",
+    "329c69210198196250a71f159305130c6d79e6eb4312afa4e6e39988fd6442eb",
+    "374ab33eada830098fbf9f34cbcfecd6e7a6667d47ee14f247c83558d6099e5d",
+    "3beebfa057de5c77bdd8f5eb9f7645705b56f9baf31202389a67b85bd987ccc0",
+    "3c23940f6742b5ca4504b63953d12d49bb571f8df914140e4f1e0322d5f68770",
+    "3d4741b90b3acdbf0839f5e279e4bff139237f82f639ee86d26c83ebb7dafa45",
+    "3d66051c0b00a496934740dde5454c78aa3cbfea57510d315dd5ad4e03a5fe13",
+    "46a7aa8e08262086ace0b7cfc754697cb4c45d67ecc710838be93b8b04f1bead",
+    "46acc2bb4f0ddf3f67bbc15712ae197b21771fae3ffc11859f812eb656ce4aa9",
+    "4a3d49bf4e41fcd7e38138571f7f59fd44c785ac9020f34ff4b596bf4a102e69",
+    "51f88ed3eaffee1452f9b5d7b2347ea3cdf10c777b026eb2aef4163396840e16",
+    "55faca3b5b8c86dec89c801b4d3fa20be2fe031481ed8f86d1ffbc15a4977723",
+    "57ebdf58b118f982a97fb45ea01c6fe1bde76fab375197f02ace963fc059ec84",
+    "61abb32c1a5f955448f0760a8b6567b16e7310fe8380223072882eea37f9c9bc",
+    "649405fcf91413110dc5a9180050d08d29efa0599b0b1a8a1ec7cd95f8c57617",
+    "663037e465fec267f3adc133df82b90781100179421d18f93931e91cf267b83f",
+    "697ae6b19521d86b5def9750017cab376ee79a1c25fa795636cbc3a2fc8fd771",
+    "730e75b6c1eb0ecefc4da63dde81f2fc44de4a0f4502d0ff13ca60fdc468199b",
+    "8109cecd452086714858246e20a812efed55b8f0e3e9828f87bed05db967f5da",
+    "859ef3c1bd707c76149de3954ef93a0167ccdb2259916c6b35f1a79e4e4516af",
+    "897d006bee710c72015aca1026bc7918340805cc2392ba5c961e4e20971f3673",
+    "89b3eba7bd5b2139ee8ff60f03f83ad487745bbc8237b66179bf1be94ad44f3e",
+    "8edb68bd1b2ac629667c3e321c9b2479a54fc8c80e672f2f751c07186d83e8d2",
+    "992b78849e12d22e02c714ba9cfd5ac5ef88c99641da270cbdf3247749778bf5",
+    "9a6e0463d5a47d97173722e87c4188ac1dcc226b321a42687dae4ddce712f278",
+    "9c82c8ec46af0fd4f4b84fe5a8383e044e4cdcc4f25cbe643a5177b3438954d6",
+    "9c99397bf46012b7f607f3da5f64f6988c03da1a703c72a2aaca5a54f233dcbc",
+    "aa71432081177a1f56ac7c897539bb5ce4a32c88069b8e0952b395de3b0083ce",
+    "ac78059ccb46e92b0dfcf1b622a05918c17afb6565f64a06e6d497dd7c92fe88",
+    "afa5228c074715da9210a0da506882418a787bda7b79eaf8cdd2ba43d9747572",
+    "b587e1f7b85ddf196368b0b34ed573c2894a88296df9d7098696f98a76fd9820",
+    "b96e7d8ff0ca241a8657d13c3f69b46040ecff67f3931cf862a26c003d8dd701",
+    "cac5a33a8e7e03aae12fa3fb48c5dab3419e1f75edeaed5cc4b89a668218d2e6",
+    "d37343721b2dade0b9997bf88f24a435e0bad13757d117af88b3dd59acc0ca2d",
+    "d421d07102dab855526ddd9be804415d47b5a124a901c262fe228ea8b4c41f0b",
+    "e0ed34dcb907fde9658e6a663d0eeae50b203955e226d34d7fb157421f7276db",
+    "e4bfa0fd750c4d06dde0390ec3a6b955bbf61ab265697cb7e1dd2eaccb429f3d",
+    "ed167137d052122f00997e5603cf9d4b761afedec3e1f0a6c5ba970fba07fcc8",
+    "ef7603526921cc8127626cb9e15c82800c81e5df36d9fde87d825ec088fc88e6",
+    "fd9c9e4d0f574e00cc3786a0c7489de6f982b21bbf1df5d99b14a1fda50d3c22"
+  ],
+  "recettes": {
+    "tchebou-win": {
+      "statut": "provisoire",
+      "note": "Vignette 450 × 340 découpée dans une planche, nom incrusté : à remplacer."
+    },
+    "tcheb-poulet-win": {
+      "statut": "provisoire",
+      "note": "Vignette 450 × 340 découpée dans une planche, nom incrusté : à remplacer."
+    },
+    "mafwin": {
+      "statut": "provisoire",
+      "note": "Vignette 450 × 340 découpée dans une planche, nom incrusté : à remplacer."
+    },
+    "poulet-yaswin": {
+      "statut": "provisoire",
+      "note": "Vignette 450 × 340 découpée dans une planche, nom incrusté : à remplacer."
+    },
+    "ravitoto-win": {
+      "statut": "provisoire",
+      "note": "Vignette 450 × 340 découpée dans une planche, nom incrusté : à remplacer."
+    },
+    "hena-ritra-win": {
+      "statut": "provisoire",
+      "note": "Vignette 450 × 340 découpée dans une planche, nom incrusté : à remplacer."
+    },
+    "romazawin": {
+      "statut": "provisoire",
+      "note": "Vignette 450 × 340 découpée dans une planche, nom incrusté : à remplacer."
+    },
+    "foufou-win": {
+      "statut": "provisoire",
+      "note": "Vignette 450 × 340 découpée dans une planche, nom incrusté : à remplacer."
+    },
+    "pondou-win": {
+      "statut": "provisoire",
+      "note": "Vignette 450 × 340 découpée dans une planche, nom incrusté : à remplacer."
+    },
+    "moambe-win": {
+      "statut": "provisoire",
+      "note": "Vignette 450 × 340 découpée dans une planche, nom incrusté : à remplacer."
+    },
+    "to-win": {
+      "statut": "provisoire",
+      "note": "Vignette 450 × 340 découpée dans une planche, nom incrusté : à remplacer."
+    },
+    "riz-gras-win": {
+      "statut": "provisoire",
+      "note": "Vignette 450 × 340 découpée dans une planche, nom incrusté : à remplacer."
+    },
+    "dibi-win": {
+      "statut": "provisoire",
+      "note": "Vignette 450 × 340 découpée dans une planche, nom incrusté : à remplacer."
+    },
+    "attieke-win": {
+      "statut": "provisoire",
+      "note": "Vignette 450 × 340 découpée dans une planche, nom incrusté : à remplacer."
+    },
+    "thiou-win": {
+      "statut": "provisoire",
+      "note": "Vignette 450 × 340 découpée dans une planche, nom incrusté : à remplacer."
+    },
+    "lok-win": {
+      "statut": "provisoire",
+      "note": "Vignette 450 × 340 découpée dans une planche, nom incrusté : à remplacer."
+    },
+    "laap-win": {
+      "statut": "provisoire",
+      "note": "Vignette 450 × 340 découpée dans une planche, nom incrusté : à remplacer."
+    },
+    "khao-piak-win": {
+      "statut": "provisoire",
+      "note": "Vignette 450 × 340 découpée dans une planche, nom incrusté : à remplacer."
+    },
+    "or-lam-win": {
+      "statut": "provisoire",
+      "note": "Vignette 450 × 340 découpée dans une planche, nom incrusté : à remplacer."
+    },
+    "kung-pao-win": {
+      "statut": "provisoire",
+      "note": "Vignette 450 × 340 découpée dans une planche, nom incrusté : à remplacer."
+    },
+    "riz-cantonais-win": {
+      "statut": "provisoire",
+      "note": "Vignette 450 × 340 découpée dans une planche, nom incrusté : à remplacer."
+    },
+    "aigre-doux-win": {
+      "statut": "provisoire",
+      "note": "Vignette 450 × 340 découpée dans une planche, nom incrusté : à remplacer."
+    },
+    "mapo-win": {
+      "statut": "provisoire",
+      "note": "Vignette 450 × 340 découpée dans une planche, nom incrusté : à remplacer."
+    },
+    "teriyaki-win": {
+      "statut": "provisoire",
+      "note": "Vignette 450 × 340 découpée dans une planche, nom incrusté : à remplacer."
+    },
+    "ramen-win": {
+      "statut": "provisoire",
+      "note": "Vignette 450 × 340 découpée dans une planche, nom incrusté : à remplacer."
+    },
+    "karaage-win": {
+      "statut": "provisoire",
+      "note": "Vignette 450 × 340 découpée dans une planche, nom incrusté : à remplacer."
+    },
+    "gyowin": {
+      "statut": "provisoire",
+      "note": "Vignette 450 × 340 découpée dans une planche, nom incrusté : à remplacer."
+    },
+    "pho-win": {
+      "statut": "provisoire",
+      "note": "Vignette 450 × 340 découpée dans une planche, nom incrusté : à remplacer."
+    },
+    "bo-bun-win": {
+      "statut": "provisoire",
+      "note": "Vignette 450 × 340 découpée dans une planche, nom incrusté : à remplacer."
+    },
+    "pad-win": {
+      "statut": "provisoire",
+      "note": "Vignette 450 × 340 découpée dans une planche, nom incrusté : à remplacer."
+    },
+    "bourguignon-win": {
+      "statut": "manquante",
+      "note": "Aucune illustration fiable disponible."
+    },
+    "pot-au-win": {
+      "statut": "manquante",
+      "note": "Aucune illustration fiable disponible."
+    },
+    "coq-au-win": {
+      "statut": "manquante",
+      "note": "Aucune illustration fiable disponible."
+    },
+    "blanquette-win": {
+      "statut": "manquante",
+      "note": "Aucune illustration fiable disponible."
+    },
+    "hachis-parmenwin": {
+      "statut": "manquante",
+      "note": "Aucune illustration fiable disponible."
+    },
+    "gratin-dauphinwin": {
+      "statut": "manquante",
+      "note": "Aucune illustration fiable disponible."
+    },
+    "cassoulet-win": {
+      "statut": "manquante",
+      "note": "Aucune illustration fiable disponible."
+    },
+    "tartiflette-win": {
+      "statut": "manquante",
+      "note": "Aucune illustration fiable disponible."
+    },
+    "ratatouille-win": {
+      "statut": "manquante",
+      "note": "Aucune illustration fiable disponible."
+    },
+    "choucroute-win": {
+      "statut": "manquante",
+      "note": "Aucune illustration fiable disponible."
+    },
+    "navarin-win": {
+      "statut": "manquante",
+      "note": "Aucune illustration fiable disponible."
+    },
+    "poulet-basquaise-win": {
+      "statut": "provisoire",
+      "note": "Vignette 450 × 340 découpée dans une planche, nom incrusté : à remplacer."
+    },
+    "moules-frites-win": {
+      "statut": "provisoire",
+      "note": "Vignette 450 × 340 découpée dans une planche, nom incrusté : à remplacer."
+    },
+    "croque-win": {
+      "statut": "provisoire",
+      "note": "Vignette 450 × 340 découpée dans une planche, nom incrusté : à remplacer."
+    },
+    "quiche-win": {
+      "statut": "provisoire",
+      "note": "Vignette 450 × 340 découpée dans une planche, nom incrusté : à remplacer."
+    },
+    "couscous-win-royal": {
+      "statut": "manquante",
+      "note": "Aucune illustration fiable disponible."
+    },
+    "tajine-win-au-poulet": {
+      "statut": "manquante",
+      "note": "Aucune illustration fiable disponible."
+    },
+    "tajine-kefta-win": {
+      "statut": "manquante",
+      "note": "Aucune illustration fiable disponible."
+    },
+    "tajine-agneau-win": {
+      "statut": "manquante",
+      "note": "Aucune illustration fiable disponible."
+    },
+    "chorba-win": {
+      "statut": "manquante",
+      "note": "Aucune illustration fiable disponible."
+    },
+    "harira-win": {
+      "statut": "manquante",
+      "note": "Aucune illustration fiable disponible."
+    },
+    "loubia-win": {
+      "statut": "manquante",
+      "note": "Aucune illustration fiable disponible."
+    },
+    "chakchouka-win": {
+      "statut": "manquante",
+      "note": "Aucune illustration fiable disponible."
+    },
+    "zaalouk-win": {
+      "statut": "manquante",
+      "note": "Aucune illustration fiable disponible."
+    },
+    "rfissa-win": {
+      "statut": "manquante",
+      "note": "Aucune illustration fiable disponible."
+    },
+    "brik-win-au-thon": {
+      "statut": "manquante",
+      "note": "Aucune illustration fiable disponible."
+    },
+    "mechoui-win": {
+      "statut": "manquante",
+      "note": "Aucune illustration fiable disponible."
+    },
+    "mderbel-win": {
+      "statut": "manquante",
+      "note": "Aucune illustration fiable disponible."
+    },
+    "berkoukes-win": {
+      "statut": "manquante",
+      "note": "Aucune illustration fiable disponible."
+    },
+    "tajine-sardinwin": {
+      "statut": "manquante",
+      "note": "Aucune illustration fiable disponible."
+    },
+    "bacalwin-a-bras": {
+      "statut": "provisoire",
+      "note": "Vignette 450 × 340 découpée dans une planche, nom incrusté : à remplacer."
+    },
+    "bacalwin-com-natas": {
+      "statut": "provisoire",
+      "note": "Vignette 450 × 340 découpée dans une planche, nom incrusté : à remplacer."
+    },
+    "franceswin": {
+      "statut": "provisoire",
+      "note": "Vignette 450 × 340 découpée dans une planche, nom incrusté : à remplacer."
+    },
+    "cozido-win": {
+      "statut": "provisoire",
+      "note": "Vignette 450 × 340 découpée dans une planche, nom incrusté : à remplacer."
+    },
+    "caldo-verde-win": {
+      "statut": "provisoire",
+      "note": "Vignette 450 × 340 découpée dans une planche, nom incrusté : à remplacer."
+    },
+    "arroz-de-pato-win": {
+      "statut": "provisoire",
+      "note": "Vignette 450 × 340 découpée dans une planche, nom incrusté : à remplacer."
+    },
+    "porco-alentejwin": {
+      "statut": "provisoire",
+      "note": "Vignette 450 × 340 découpée dans une planche, nom incrusté : à remplacer."
+    },
+    "bifawin": {
+      "statut": "provisoire",
+      "note": "Vignette 450 × 340 découpée dans une planche, nom incrusté : à remplacer."
+    },
+    "frango-piri-win": {
+      "statut": "provisoire",
+      "note": "Vignette 450 × 340 découpée dans une planche, nom incrusté : à remplacer."
+    },
+    "feijowin": {
+      "statut": "provisoire",
+      "note": "Vignette 450 × 340 découpée dans une planche, nom incrusté : à remplacer."
+    },
+    "sardinwin": {
+      "statut": "provisoire",
+      "note": "Vignette 450 × 340 découpée dans une planche, nom incrusté : à remplacer."
+    },
+    "polvo-win": {
+      "statut": "provisoire",
+      "note": "Vignette 450 × 340 découpée dans une planche, nom incrusté : à remplacer."
+    },
+    "arroz-de-marisco-win": {
+      "statut": "provisoire",
+      "note": "Vignette 450 × 340 découpée dans une planche, nom incrusté : à remplacer."
+    },
+    "alheira-win": {
+      "statut": "provisoire",
+      "note": "Vignette 450 × 340 découpée dans une planche, nom incrusté : à remplacer."
+    },
+    "bitoque-win": {
+      "statut": "provisoire",
+      "note": "Vignette 450 × 340 découpée dans une planche, nom incrusté : à remplacer."
+    }
+  }
+}
