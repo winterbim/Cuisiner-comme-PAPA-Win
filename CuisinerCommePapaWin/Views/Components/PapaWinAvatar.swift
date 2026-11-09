@@ -1,27 +1,86 @@
 import SwiftUI
 import UIKit
 
-/// La mascotte Papa Win.
-/// Si une image « papa_win » existe dans Assets.xcassets, elle est utilisée.
-/// Sinon, on dessine un Papa Win provisoire (crâne lisse, barbe poivre et sel, toque).
+/// Noms des images de la mascotte dans Assets.xcassets.
+/// Référence graphique unique : l'illustration Papa Win validée (`papa_win`).
+enum MascotAsset {
+    /// Illustration originale validée, jamais modifiée.
+    static let original = "papa_win"
+    /// Illustration complète en 1024 × 1024.
+    static let fullHD = "papa_win_hd"
+    /// Portrait rond 1024 × 1024 (fond transparent), centré sur le visage.
+    static let round = "papa_win_round"
+
+    static func firstAvailable(_ names: [String]) -> String? {
+        names.first { UIImage(named: $0) != nil }
+    }
+}
+
+/// La mascotte Papa Win, toujours tirée de l'illustration validée.
+/// - `.portrait` : cadrage rond sur le visage (accueil, bulles, astuces, états vides).
+/// - `.full` : illustration complète, sans recadrage du personnage.
+/// Le dessin vectoriel n'est qu'un secours si les images sont absentes du bundle.
 struct PapaWinAvatar: View {
+    enum Style {
+        case portrait
+        case full
+    }
+
     var size: CGFloat = 160
+    var style: Style = .portrait
     var showsHat: Bool = true
 
     var body: some View {
-        if UIImage(named: "papa_win") != nil {
-            Image("papa_win")
+        switch style {
+        case .portrait:
+            portrait
+        case .full:
+            fullIllustration
+        }
+    }
+
+    @ViewBuilder
+    private var portrait: some View {
+        if let name = MascotAsset.firstAvailable([MascotAsset.round, MascotAsset.fullHD, MascotAsset.original]) {
+            Image(name)
                 .resizable()
-                .scaledToFit()
+                .interpolation(.high)
+                .scaledToFill()
                 .frame(width: size, height: size)
+                .clipShape(Circle())
+                .overlay(Circle().stroke(.white, lineWidth: max(2, size * 0.035)))
+                .overlay(Circle().stroke(Theme.ink.opacity(0.15), lineWidth: 1))
+                .shadow(color: Theme.ink.opacity(0.18), radius: size * 0.05, y: size * 0.025)
                 .accessibilityLabel("Papa Win")
         } else {
-            DrawnPapaWin(showsHat: showsHat)
-                .frame(width: 200, height: 200)
-                .scaleEffect(size / 200)
-                .frame(width: size, height: size)
-                .accessibilityLabel("Papa Win")
+            drawnFallback
         }
+    }
+
+    @ViewBuilder
+    private var fullIllustration: some View {
+        if let name = MascotAsset.firstAvailable([MascotAsset.fullHD, MascotAsset.original]) {
+            let shape = RoundedRectangle(cornerRadius: size * 0.12, style: .continuous)
+            Image(name)
+                .resizable()
+                .interpolation(.high)
+                .scaledToFit()
+                .frame(width: size, height: size)
+                .clipShape(shape)
+                .overlay(shape.stroke(.white, lineWidth: max(2, size * 0.025)))
+                .shadow(color: Theme.ink.opacity(0.18), radius: size * 0.05, y: size * 0.025)
+                .accessibilityLabel("Papa Win")
+        } else {
+            drawnFallback
+        }
+    }
+
+    private var drawnFallback: some View {
+        DrawnPapaWin(showsHat: showsHat)
+            .frame(width: 200, height: 200)
+            .scaleEffect(size / 200)
+            .frame(width: size, height: size)
+            .accessibilityLabel("Papa Win")
     }
 }
 

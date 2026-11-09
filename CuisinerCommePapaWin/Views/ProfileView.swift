@@ -17,7 +17,7 @@ struct ProfileView: View {
                 VStack(spacing: 20) {
                     // Carte de chef
                     VStack(spacing: 10) {
-                        PapaWinAvatar(size: 130)
+                        PapaWinAvatar(size: 170, style: .full)
                         TextField("Ton nom de chef", text: $chefName)
                             .font(.papaTitle(26))
                             .multilineTextAlignment(.center)
