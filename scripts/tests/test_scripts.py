@@ -150,28 +150,46 @@ class ImporterTests(unittest.TestCase):
         self.assertEqual(code, 0)
         self.assertEqual(self.status("coq-au-win"), "definitive")
 
+    # Ces tests préparent eux-mêmes leur état de départ dans la copie du manifeste :
+    # ils ne dépendent pas des images réellement présentes dans le dépôt.
+
+    def set_status(self, rid, statut):
+        data = json.loads(self.manifest.read_text())
+        data["recettes"][rid] = {"statut": statut, "note": "test"}
+        self.manifest.write_text(json.dumps(data))
+
     def test_refus_trop_petite_ou_transparente(self):
+        before = {rid: self.status(rid) for rid in ("pot-au-win", "cassoulet-win")}
         (self.incoming / "pot-au-win.png").write_bytes(make_png(800, 600))
         (self.incoming / "cassoulet-win.png").write_bytes(make_png(1600, 1200, color_type=6))
         code, out = quiet(illustrations.cmd_importer, self.incoming)
         self.assertEqual(code, 1)
         self.assertIn("800×600", out)
         self.assertIn("transparence", out)
-        self.assertEqual(self.status("pot-au-win"), "manquante")
-        self.assertEqual(self.status("cassoulet-win"), "manquante")
+        for rid, statut in before.items():
+            self.assertEqual(self.status(rid), statut)
+            self.assertFalse((self.assets / f"{rid}.imageset" / f"{rid}.png").exists())
 
     def test_refus_ancienne_vignette(self):
-        legacy = A.ASSETS_DIR / "lok-win.imageset" / "lok-win.jpg"
-        shutil.copyfile(legacy, self.incoming / "lok-win.jpg")
+        legacy = self.incoming / "lok-win.png"
+        legacy.write_bytes(make_png(1600, 1200))
+        data = json.loads(self.manifest.read_text())
+        data["empreintes_vignettes_provisoires"].append(A.sha256(legacy))
+        self.manifest.write_text(json.dumps(data))
+        self.set_status("lok-win", "provisoire")
         code, out = quiet(illustrations.cmd_importer, self.incoming)
         self.assertEqual(code, 1)
         self.assertIn("ancienne vignette", out)
         self.assertEqual(self.status("lok-win"), "provisoire")
 
     def test_validation_refusee_sans_image_conforme(self):
+        small = self.tmp / "petite.png"
+        small.write_bytes(make_png(800, 600))
+        A.write_imageset("lok-win", small, "lok-win.png")
+        self.set_status("lok-win", "a_verifier")
         code, _ = quiet(illustrations.cmd_valider, ["lok-win"])
         self.assertEqual(code, 1)
-        self.assertEqual(self.status("lok-win"), "provisoire")
+        self.assertEqual(self.status("lok-win"), "a_verifier")
 
 
 class RecipeValidatorTests(unittest.TestCase):

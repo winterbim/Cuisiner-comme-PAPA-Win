@@ -12,3 +12,7 @@ xcuserdata/
 .DS_Store
 # Python
 __pycache__/
+
+# Images sources ChatGPT (PNG lourds) : seules les versions JPEG importées sont suivies
+images-papa-win/
+images-papa-win.zip
