@@ -1,10 +1,11 @@
 # Codemagic — Cuisiner comme Papa Win (SwiftUI, iOS 17+)
 #
-# Deux workflows :
+# Trois workflows :
 #   1. verification-ios : automatique à chaque push / pull request. Contrôles, tests unitaires
 #      sur simulateur et compilation Debug + Release (simulateur et iPhone) SANS signature.
 #   2. testflight-ios   : lancé À LA MAIN depuis Codemagic. Signe l'app et l'envoie sur TestFlight.
 #      Il n'y a JAMAIS de soumission automatique à l'App Store (submit_to_app_store: false).
+#   3. captures-ecran   : lancé À LA MAIN. Prend les 6 captures App Store (iPhone 6,9 pouces) en artefacts.
 #
 # Prérequis côté Codemagic / Apple : voir docs/CAHIER_DES_CHARGES.md, section « Codemagic ».
 # Aucun secret n'est stocké dans ce fichier.
@@ -198,3 +199,20 @@ workflows:
         submit_to_testflight: true
         # Soumission à la revue App Store : JAMAIS automatique. Décision manuelle du propriétaire.
         submit_to_app_store: false
+
+  captures-ecran:
+    name: Captures d'écran App Store (iPhone 6,9 pouces, manuel)
+    <<: *instance
+    max_build_duration: 45
+    environment:
+      xcode: latest
+      vars:
+        <<: *xcode_vars
+    # Pas de section « triggering » : ce workflow ne démarre que manuellement.
+    scripts:
+      - *preparation
+      - name: Captures des 6 écrans (simulateur iPhone Pro Max)
+        script: scripts/ci/captures_ecran.sh
+    artifacts:
+      - build/captures-ecran/*.png
+      - build/logs/*.log

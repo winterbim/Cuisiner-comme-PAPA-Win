@@ -25,6 +25,18 @@ struct RootView: View {
     @State private var selectedTab: AppTab = .home
 
     var body: some View {
+        #if DEBUG
+        if let capture = CaptureScreen.current {
+            CaptureScreenView(capture: capture, tabs: mainContent, selectedTab: $selectedTab)
+        } else {
+            mainContent
+        }
+        #else
+        mainContent
+        #endif
+    }
+
+    private var mainContent: some View {
         TabView(selection: $selectedTab) {
             HomeView(selectedTab: $selectedTab)
                 .tabItem { Label("Accueil", systemImage: "house.fill") }
@@ -59,3 +71,49 @@ struct RootView: View {
         }
     }
 }
+
+#if DEBUG
+// MARK: - Captures d'écran App Store (Debug uniquement, absent de la version publiée)
+
+/// Écran ouvert directement au lancement : `-captureEcran accueil|recettes|fiche|favoris|profil|bienvenue`.
+/// Utilisé par le workflow Codemagic « captures-ecran ».
+enum CaptureScreen: String {
+    case bienvenue, accueil, recettes, fiche, favoris, profil
+
+    static var current: CaptureScreen? {
+        UserDefaults.standard.string(forKey: "captureEcran").flatMap(CaptureScreen.init(rawValue:))
+    }
+
+    /// Recette affichée par la capture « fiche » (`-captureRecette ID`, Tajine Agneau Win par défaut).
+    static var recipeID: String {
+        UserDefaults.standard.string(forKey: "captureRecette") ?? "tajine-agneau-win"
+    }
+}
+
+struct CaptureScreenView<Tabs: View>: View {
+    @Environment(RecipeStore.self) private var recipeStore
+    let capture: CaptureScreen
+    let tabs: Tabs
+    @Binding var selectedTab: AppTab
+
+    var body: some View {
+        switch capture {
+        case .bienvenue:
+            WelcomeView(onStart: {}, onDiscover: {})
+        case .fiche:
+            if let recipe = recipeStore.recipes.first(where: { $0.id == CaptureScreen.recipeID }) {
+                NavigationStack { RecipeDetailView(recipe: recipe) }
+            }
+        case .accueil, .recettes, .favoris, .profil:
+            tabs.onAppear {
+                selectedTab = switch capture {
+                case .recettes: .recipes
+                case .favoris: .favorites
+                case .profil: .profile
+                default: .home
+                }
+            }
+        }
+    }
+}
+#endif
